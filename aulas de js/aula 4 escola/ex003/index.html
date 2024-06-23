@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font: 15pt Arial;
+            color: rgb(0, 86, 161);
+        }
+        body{
+            background-image: linear-gradient(to right,#ACD1F2,#04BF55,#88BF6F,#F2A922);
+        }
+        .main{
+            width: 270px;
+            height: 270px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.351);
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+        }
+        input{
+            margin-top: 5px;
+            margin-bottom: 20px;
+            height: 30px;
+            border-radius: 7px;
+            color: rgba(0, 0, 0, 0.98);
+        }
+        #res{
+            background: aliceblue;
+        }
+        #calc{
+            width: 100px;
+            background-color: #04BF55;
+            color: #e4f1fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <label for="">O que você quer?</label>
+        <input id="prod"ype="text" placeholder="Ex: calça">
+        <label for="">Quanto disso você quer?</label>
+        <input id="quant" type="text" placeholder="Ex: 4">
+        <input id="calc" type="button" value="Calcular" onclick="calcular()">
+        <label for="">Total a pagar:</label>
+        <input id="res" type="text" disabled>
+    </div>
+    <script>
+        function calcular(){
+            prod = document.getElementById('prod')
+            quant = document.getElementById('quant')
+            res = document.getElementById('res')
+            q = Number(quant.value)
+            p = prod.value
+            switch(p){
+                case 'calça':
+                    res.value = `R$ ${70 * q},00`
+                    break
+                case 'blusa':
+                    res.value = `R$ ${50 * q},00`
+                    break
+                case 'sapato':
+                    res.value = `R$ ${120 * q},00`
+                    break
+                case 'meia':
+                    res.value = `R$ ${20 * q},00`
+                    break
+                case 'cueca':
+                    res.value = `R$ ${10 * q},00`
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual gasola é melhor?</title>
+    <style>
+        .m1, .m2{
+            display: flex;
+            justify-content: center;
+            background-color: blueviolet;
+            width: 400px;
+            height: 750px;
+            margin-top: 170px;
+        }
+        .m1>img, .m2>img{
+            width: 170px;
+            height: 110px;
+            margin-top: 30%;
+        }
+        .m1>#ag, .m2>#ag{
+            position: absolute;
+            color: aliceblue;
+            font-size: 15pt;
+            margin-top: 11.5%;
+        }
+        .m1{
+            margin-left: 27%;
+        }
+        .ips{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            margin-top: 15%;
+        }
+        .m1>.ips>input{
+            height: 25px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        .m1>.ips>label{
+            margin-top: 20px;
+            color: aliceblue;
+        }
+        .m1>.ips>input#bt{
+            background-color: rgba(240, 248, 255, 0.737);
+            color: blueviolet;
+            font-size: 17pt;
+            height: 55px;
+            border-radius: 50px;
+            margin-top: 70px;
+        }
+        .m2{
+            float: right;
+            margin-top: -35.4%;
+            margin-right: 27%;
+        }
+        .m2>div.comp{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            background-color: rgba(240, 248, 255, 0.737);
+            padding: 20px;
+            color: rgb(100, 1, 193);
+            border-radius: 60px;
+            margin-top: 15%;
+            width: 300px;
+            height: 230px;
+            display: none;
+        }
+        .m2>div.comp>h1{
+            text-align: center;
+            font-size: 19pt;
+            margin-top: 17%;
+        }
+        .m2>div.comp>input{
+            font-size: 18pt;
+            position: absolute;
+            height: 55px;
+            width: 250px;
+            margin-top: 33%;
+            border-radius: 50px;
+            background-color: rgb(99, 0, 192);
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <main class="m1">
+        <img src="gasola2.png">
+        <p id="ag">Álcool ou gasolina?</p>
+        <div class="ips">
+            <label for="">Digite a quantidade de álcool que você quer:</label>
+            <input id="b1" type="number">
+            <label for="">Digite a quantidade de gasolina que você quer:</label>
+            <input id="b2" type="number">
+            <input id="bt" type="button" value="Calcular" onclick="calc()">
+        </div>
+    </main>
+    <main class="m2">
+        <img src="gasola2.png">
+        <p id="ag">Álcool ou gasolina?</p>
+        <div class="comp">
+            <h1 id="ac">Compensa comprar álcool!</h1>
+            <h1 id="ga">Compensa utilizar gasolina!</h1>
+            <p id="n1"></p>
+            <p id="n2"></p>
+            <input type="button" value="Calcular novamente" onclick="clic2()">
+        </div>
+    </main>
+    <script>
+        /*Preço do álcool: R$ 3,42
+        Preço da gasolina: R$ 5,78*/
+        var a1 = window.document.querySelector('input#b1')
+        var a2 = window.document.querySelector('input#b2')
+        var b1 = Number(a1.value)
+        var b2 = Number(a2.value)
+        var n1 = 0
+        var n2 = 0
+        var res = window.document.querySelector('div.comp')
+        var ac = window.document.querySelector('h1#ac')
+        var ga = window.document.querySelector('h1#ga')
+        function calc(){
+            res.style.display = 'block'
+            if(b1 >= 1, b2 >=1){
+                n1 = b1*3.42
+                n2 = b2*5.78
+                if(n1 > n2){
+                    ga.style.display = 'none'
+                    ac.style.display = 'block'
+                }else{
+                    ga.style.display = 'block'
+                    ac.style.display = 'none'
+                }
+            }
+        }
+        function clic2(){
+            res.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

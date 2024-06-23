@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="focos" type="text" onfocus="ganhafoco()">
+    <input id="libera" type="text" onkeyup="up()">
+    <input id="pressiona" type="text" onkeydown="down()">
+</body>
+<script>
+    function ganhafoco(){
+        var ipt = document.getElementById('focos')
+        ipt.style.boxShadow = '5px 5px 5px'
+    }
+    
+    function up(){
+        var x = document.getElementById('libera')
+        x.value = x.value.toUpperCase()
+
+    }
+    function down(){
+        var y = document.getElementById('pressiona').style.color = 'red'
+
+    }
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+    <style>
+        input{
+            margin-top: 10px;
+        }
+        .res{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="emprestimo">
+        <h1>Empréstimo de livro</h1>
+        <label for="">Livro</label>
+        <input type="text" id="livro"> <br>
+        <span id="alertaLivro"></span> <br>
+        <label for="">Autor</label>
+        <input type="text" id="autor"> <br>
+        <span id="alertaAutor"></span> <br>
+        <label for="">Professor</label>
+        <input type="radio" name="opc" id="prof" onclick="professor()">
+        <label for="">Aluno</label>
+        <input type="radio" name="opc" id="aluno" onclick="aluno()"> <br>
+        <span id="alertaRadio"></span> <br>
+        <label for="">Dias</label>
+        <input type="text" disabled id="res">
+        <input type="button" value="Enviar" onclick="enviar()">
+    </div>
+    <div class="res" id="r">
+        <h1>Devolução</h1>
+        <h2 id="data"></h2>
+    </div>
+    <script>
+        let now = new Date()
+        var hoje = 29
+        var mes = 5
+        var ano = 2024
+        function professor(){
+            if(professor){
+                hoje = 29
+                mes = 5
+                document.getElementById('res').value = 10
+                if (hoje + 10 > 30) {
+                    hoje += 10
+                    hoje -= 30
+                    mes += 1
+                }else{
+                    hoje += 10
+                    mes = mes
+                    ano = ano
+                }
+            }
+        }
+        function aluno(){
+            if(aluno){
+                hoje = 29
+                mes = 5
+                document.getElementById('res').value = 3
+                if (hoje + 3 > 30) {
+                    hoje += 3
+                    hoje -= 30 
+                    mes += 1
+                }else{
+                    hoje += 3
+                    mes = mes
+                    ano = ano
+                }
+            }
+        }
+        function enviar(){
+            
+            if(document.getElementById('livro').value === ""){
+                alertaLivro = document.getElementById('alertaLivro')
+                alertaLivro.innerText = 'Preencha este campo!'
+                alertaLivro.style.color = 'red'
+            }else{
+                alertaLivro.innerText = ""
+            }
+            if(document.getElementById('autor').value === ""){
+                alertaAutor = document.getElementById('alertaAutor')
+                alertaAutor.innerText = 'Preencha este campo!'
+                alertaAutor.style.color = 'red'
+            }else{
+                alertaAutor.innerText = ""
+            }
+            if(!document.getElementById('prof').checked && !document.getElementById('aluno').checked){
+                alertaRadio = document.getElementById('alertaRadio')
+                alertaRadio.innerText = 'Preencha este campo!'
+                alertaRadio.style.color = 'red'
+            }else{
+                alertaRadio.innerText = ""
+            }
+            if(alertaLivro.innerText === "" && alertaAutor.innerText === "" && alertaRadio.innerText === ""){
+                let data = document.getElementById('data')
+                data.innerHTML = `${hoje}/${mes}/${ano}`
+                document.getElementById('r').style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>

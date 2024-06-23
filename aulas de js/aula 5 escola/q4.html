@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior número</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        input{
+            margin-bottom: 10px;
+            height: 30px;
+        }
+        #calc{
+            width: 100px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <label for="">Digite 1 número:</label>
+        <input id="n1" type="text">
+        <label for="">Digite outro número:</label>
+        <input id="n2" type="text">
+        <label for="">Digite outro número:</label>
+        <input id="n3" type="text">
+        <label for="">Digite outro número:</label>
+        <input id="n4" type="text">
+        <label for="">Digite outro número:</label>
+        <input id="n5" type="text">
+        <input id="calc" type="button" value="Calcular" onclick="calcular()">
+        <input id="res" type="text" disabled placeholder="Maior número:">
+    </div>
+    <script>
+        function calcular(){
+            var n11 = document.getElementById('n1')
+            var n21 = document.getElementById('n2')
+            var n31 = document.getElementById('n3')
+            var n41 = document.getElementById('n4')
+            var n51 = document.getElementById('n5')
+            var n1 = Number(n11.value)
+            var n2 = Number(n21.value)
+            var n3 = Number(n31.value)
+            var n4 = Number(n41.value)
+            var n5 = Number(n51.value)
+            var res = document.getElementById('res')
+            if(n1 > n2 && n1 > n3 && n1 > n4 && n1 > n5){
+                res.value = `O maior número é ${n1}`
+            }
+            if(n2 > n1 && n2 > n3 && n2 > n4 && n2 > n5){
+                res.value = `O maior número é ${n2}`
+            }
+            if(n3 > n1 && n3 > n2 && n3 > n4 && n3 > n5){
+                res.value = `O maior número é ${n3}`
+            }
+            if(n4 > n1 && n4 > n2 && n4 > n3 && n4 > n5){
+                res.value = `O maior número é ${n4}`
+            }
+            if(n5 > n1 && n5 > n2 && n5 > n3 && n5 > n4){
+                res.value = `O maior número é ${n5}`
+            }
+            // lista = []
+            // lista.push()
+            // Math.max(...lista)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 13pt;
+        }
+        #pessoaf,#pessoaj{
+            position: absolute;
+            display: none;
+            width: 200px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 50px;
+            flex-direction: column;
+            color: rgb(0, 0, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15pt;
+            align-items: center;
+        }
+        #pessoaf>input, #pessoaj>input{
+            border-radius: 7px;
+            border: 1px solid rgb(117, 116, 116);
+            padding: 3px;
+            width: 250px;
+        }
+        #pessoaf>label, #pessoaj>label{
+            margin-top: 5px;
+            margin-left: -200px;
+        }
+        button{
+            width: 250px;
+            border-radius: 10px;
+            border: none;
+            background-color: black;
+            color: aliceblue;
+            padding: 8px;
+            margin-top: 20px;
+            font-size: 13pt;
+        }
+        span{
+            font-size: 12pt;
+            color: rgb(255, 194, 39);
+            text-align: center;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é:</h1>
+    <label for="">Pessoa física</label>
+    <input type="radio" name="pessoa" id="pf" onclick="pf()">
+    <label for="">Pessoa Jurídica</label>
+    <input type="radio" name="pessoa" id="pj" onclick="pj()">
+    <br>
+    <form id="pessoaf">
+        <h2 style="text-align: center; text-decoration: underline;">Pessoa física</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <span id="alertaNome"></span>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="alertaEmail"></span>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+        <span id="alertaSenha"></span>
+        <label for="" style="margin-right: -100px;">Confirme a senha:</label>
+        <input type="password" id="senha1" name="senha1">
+        <span id="alertaConf"></span>
+        <label style="margin-right: 20px;" for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf">
+        <span id="alertaCpf"></span>
+        <label style="margin-right: -23px;" for="endereco">Endereço:</label>
+        <input type="text" id="end" name="endereco">
+        <span id="alertaEnd"></span>
+        <label style="margin-right: -120px;" for="dtnasc">Data de nascimento:</label>
+        <input type="text" id="dtnasc" name="dtnasc">
+        <span id="alertaDtnasc"></span>
+        <button type="button" onclick="validarFormulario()">Enviar</button>
+    </form>
+    <form id="pessoaj">
+        <h2 style="text-align: center; text-decoration: underline;">Pessoa jurídica</h2>
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj">
+        <span id="alertaCnpj"></span>
+        <label style="margin-right: -30px;" for="endereco2">Endereço:</label>
+        <input type="text" id="end2" name="end2">
+        <span id="alertaEnd2"></span>
+        <label style="margin-right: -30px;" for="telefone">Telefone:</label>
+        <input type="text" id="tel" name="telefone">
+        <span id="alertaTel"></span>
+        <button type="button" onclick="validarFormulario2()">Enviar</button>
+    </form>
+    <script>
+        let f1 = document.getElementById('pessoaf')
+        let f2 = document.getElementById('pessoaj')
+        function pf(){
+            f1.style.display = 'inline-flex'
+            f2.style.display = 'none'
+        }
+        function pj(){
+            f2.style.display = 'inline-flex'
+            f1.style.display = 'none'
+        }
+        function validarFormulario() {
+            let camposVazios = false;
+            let nome = document.getElementById("nome").value;
+            let alertaNome = document.getElementById("alertaNome");
+            if (nome === "") {
+                alertaNome.innerHTML = "Por favor, preencha o campo Nome.";
+                camposVazios = true;
+            } else {
+                alertaNome.innerHTML = "";
+            }
+            let email = document.getElementById("email").value;
+            let alertaEmail = document.getElementById("alertaEmail");
+            if (email === "") {
+                alertaEmail.innerHTML = "Por favor, preencha o campo Email.";
+                camposVazios = true;
+            } else {
+                alertaEmail.innerHTML = "";
+            }
+            let senha = document.getElementById("senha").value;
+            let alertaSenha = document.getElementById("alertaSenha");
+            if (senha === "") {
+                alertaSenha.innerHTML = "Por favor, preencha o campo Senha.";
+                camposVazios = true;
+            }else if(senha.length < 3){
+                alertaSenha.innerHTML = 'Senha fraca'
+                alertaSenha.style.color = 'red'
+            }else if(senha.length < 5){
+                alertaSenha.innerHTML = 'Senha média'
+                alertaSenha.style.color = 'orange'
+            }else if(senha.length >= 6){
+                alertaSenha.innerHTML = 'Senha forte'
+                alertaSenha.style.color = 'green'
+            }else {
+                alertaSenha.innerHTML = "";
+            }
+            let senha1 = document.getElementById("senha1").value;
+            let alertaConf = document.getElementById("alertaConf");
+            if (senha1 === "") {
+                alertaConf.innerHTML = "Por favor, preencha o campo Confirme a senha.";
+                camposVazios = true;
+            }else if(senha1 != "" && senha1 != senha){
+                alertaConf.innerHTML = 'Este campo deve ser igual o anterior'
+                alertaConf.style.color = 'red'
+            }
+             else {
+                alertaConf.innerHTML = "";
+            }
+            
+            let cpf = document.getElementById("cpf").value;
+            let alertaCpf = document.getElementById("alertaCpf");
+            if (cpf === "") {
+                alertaCpf.innerHTML = "Por favor, preencha o campo CPF.";
+                camposVazios = true;
+            } else {
+                alertaCpf.innerHTML = "";
+            }
+            let end = document.getElementById("end").value;
+            let alertaEnd = document.getElementById("alertaEnd");
+            if (email === "") {
+                alertaEnd.innerHTML = "Por favor, preencha o campo Endereço.";
+                camposVazios = true;
+            } else {
+                alertaEnd.innerHTML = "";
+            }
+            let dtnasc = document.getElementById("dtnasc").value;
+            let alertaDtnasc = document.getElementById("alertaDtnasc");
+            if (dtnasc === "") {
+                alertaDtnasc.innerHTML = "Por favor, preencha o campo Data de nascimento.";
+                camposVazios = true;
+            } else {
+                alertaDtnasc.innerHTML = "";
+            }
+        }
+        function validarFormulario2(){
+            let cnpj = document.getElementById("cnpj").value;
+            let alertaCnpj = document.getElementById("alertaCnpj");
+            if (cnpj === "") {
+                alertaCnpj.innerHTML = "Por favor, preencha o campo CNPJ.";
+                camposVazios = true;
+            } else {
+                alertaCnpj.innerHTML = "";
+            }
+            let end2 = document.getElementById("end2").value;
+            let alertaEnd2 = document.getElementById("alertaEnd2");
+            if (end2 === "") {
+                alertaEnd2.innerHTML = "Por favor, preencha o campo Endereço.";
+                camposVazios = true;
+            } else {
+                alertaEnd2.innerHTML = "";
+            }
+            let tel = document.getElementById("tel").value;
+            let alertaTel = document.getElementById("alertaTel");
+            if (tel === "") {
+                alertaTel.innerHTML = "Por favor, preencha o campo Telefone.";
+                camposVazios = true;
+            } else {
+                alertaTel.innerHTML = "";
+            }
+            if (camposVazios) {
+            } else {
+                alert("Formulário enviado com sucesso!");
+            }
+        }
+    </script>
+</body>
+</html>

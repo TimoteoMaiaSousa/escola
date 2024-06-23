@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando</title>
+</head>
+<body>
+    <input type="radio" name="cor" id="r" onclick="red()">red
+    <input type="radio" name="cor" id="g" onclick="green()">green
+    <input type="radio" name="cor" id="b" onclick="blue()">blue
+    <h1 id="nome">Vitória</h1>
+    <script>
+        var a = document.getElementById('nome')
+        function red() {
+            a.style.color = 'red'
+        }
+        function green() {
+            a.style.color = 'green'
+        }
+        function blue() {
+            a.style.color = 'blue'
+        }
+    </script>
+</body>
+</html>

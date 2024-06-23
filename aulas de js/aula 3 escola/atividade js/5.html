@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabajara</title>
+    <style>
+        .main{
+            width: 370px;
+            height: 370px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.62);
+            border: 2px solid rgba(0, 0, 0, 0.587);
+            padding: 30px;
+            border-radius: 100px;
+        }
+        div>img{
+            width: 250px;
+            border-radius: 20px;
+            margin-left: 60px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.618);
+        }
+        div>div>input{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            width: 270px;
+            border-radius: 5px;
+            border: 0.2px solid rgb(255, 255, 255);
+            background-color: rgba(30, 30, 46, 0.285);
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+        #reajuste{
+            width: 70px;
+            margin-left: 290px;
+            margin-top: -32px;
+            background-color:crimson;
+            color: aliceblue;
+        }
+        img{
+            margin-top: -20px;
+        }
+        div>div{
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="tabajara.jfif" alt="tabajara">
+        <div>
+            <label for="">Salário atual:</label>
+            <input id="sal" type="number">
+            <input id="reajuste" type="button" onclick="reajustar()" value="Reajustar">
+            <label for="">Salário antes do reajuste:</label>
+            <input id="sala" type="text" disabled>
+            <label for="">Percentual de aumento aplicado:</label>
+            <input id="perc" type="text" disabled>
+            <label for="">Valor do aumento:</label>
+            <input id="au" type="text" disabled>
+            <label for="">Novo salário depois do aumento:</label>
+            <input id="nsal" type="text" disabled>
+        </div>
+    </div>
+    <script>
+        function reajustar(){
+            var sal = document.getElementById('sal')
+            var salario = Number(sal.value)
+            var sala = document.getElementById('sala')
+            var perc = document.getElementById('perc')
+            var au = document.getElementById('au')
+            var nsal = document.getElementById('nsal')
+            if(salario <= 280){
+                sala.value = `R$ ${salario},00`
+                perc.value = `20%`
+                au.value = `R$ ${salario * (20/100)},00`
+                nsal.value = `R$ ${salario + salario * (20 / 100)},00`
+            }else if(salario > 280 && salario <= 700){
+                sala.value = `R$ ${salario},00`
+                perc.value = `15%`
+                au.value = `R$ ${salario * (15/100)},00`
+                nsal.value = `R$ ${salario + salario * (15 / 100)},00`
+            }else if(salario > 700 && salario <= 1500){
+                sala.value = `R$ ${salario},00`
+                perc.value = `10%`
+                au.value = `R$ ${salario * (10/100)},00`
+                nsal.value = `R$ ${salario + salario * (10 / 100)},00`
+            }else if(salario > 1500){
+                sala.value = `R$ ${salario},00`
+                perc.value = `5%`
+                au.value = `R$ ${salario * (5/100)},00`
+                nsal.value = `R$ ${salario + salario * (5 / 100)},00`
+            }
+        }   
+    </script>
+</body>
+</html>

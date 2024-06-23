@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body{
+background: rgb(70, 142, 236);
+font: normal 13pt Arial;
+}
+header{
+color: white;
+text-align: center;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.357);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+color: white;
+text-align: center;
+font-style: italic;
+}
+#seltab{
+    padding: 20px;
+}
+input{
+    margin-bottom: 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada da multiplicação</h1>
+    </header>
+    <section>
+        <div>
+            <label for="">Número:</label>
+            <input type="number" name="" id="num">
+            <input type="button" value="Gerar tabuada" onclick="tabuada()">
+        </div>
+        <div>
+            <p id="av"></p>
+            <select name="tabuada" id="seltab" size="10">
+            </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Cursoemvideo</p>
+    </footer>
+    <script>
+        function tabuada(){
+    let num = document.getElementById('num')
+    let tab = document.getElementById('seltab')
+    var av = document.getElementById('av')
+    if(num.value.length == 0){
+        av.innerHTML = 'Digite um número no espaço acima!'
+        av.style.color = 'red'
+        av.style.fontSize = '10pt'
+        av.style.textDecoration = 'underline'
+        tab.innerHTML = ''
+    }else{
+            let n = Number(num.value)
+            let c = 1
+            av.innerHTML = `Tabuada de multiplicação do ${n}:`
+            av.style.fontSize = '10pt'
+            av.style.color = 'green'
+            tab.innerHTML = ''
+            while(c <= 10){
+                let item = document.createElement('option')
+                item.text = `${n} x ${c} = ${n*c}`
+                tab.appendChild(item)
+                c++
+        }
+    }
+}
+    </script>
+</body>
+</html>

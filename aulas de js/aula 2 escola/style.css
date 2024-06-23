@@ -1,0 +1,36 @@
+.calc{
+    background-color: rgb(43, 42, 42);
+    width: 300px;
+    height: 500px;
+    padding: 30px;
+    justify-content: center;
+}
+#resul{
+    height: 30px;
+    width: 290px;
+}
+button{
+    width: 30px;
+    height: 30px;
+    font-size: 15pt;
+    border-radius: 5px;
+}
+.nums{
+    width: 250px;
+}
+.nums>button{
+    width: 50px;
+    background-color: rgb(0, 214, 214);
+    color: #fff;
+    margin: 10px;
+}
+.operacoes{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-top: -150px;
+}
+.operacoes>button{
+    margin-bottom: 10px;
+    background-color: gold;
+}

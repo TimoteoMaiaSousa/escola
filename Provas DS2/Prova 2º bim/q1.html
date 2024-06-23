@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+    <style>
+        .q1,.q2{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            width: 23px;
+        }
+        p{
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    &#x2612;
+    &#x2611;
+    <div class="q1">
+        <h3>1ª) Quanto é 1 + 1?</h3>
+        <p><input type="button" value="a" id="a1" onclick="a11()" name="opc"> 0</p>
+        <p><input type="button" value="b" id="b1" onclick="b11()" name="opc"> 1</p>
+        <p><input type="button" value="c" id="c1" onclick="certo1()"> 2</p>
+        <p><input type="button" value="d" id="d1" onclick="d11()" name="opc"> 3</p>
+        <span id="alertaQ1"></span>
+    </div>
+    <div class="q2">
+        <h3>2ª) Quanto é 2 x 2?</h3>
+        <p><input type="button" value="a" id="a2" onclick="a22()"> 2</p>
+        <p><input type="button" value="b" id="b2" onclick="certo2()"> 4</p>
+        <p><input type="button" value="c" id="c2" onclick="c22()"> 8</p>
+        <p><input type="button" value="d" id="d2" onclick="d22()"> 22</p>
+        <span id="alertaQ2"></span>
+    </div>
+    <script>
+        var certo_1 = document.getElementById('c1');
+        var certo_2 = document.getElementById('b2');
+        var a1 = document.getElementById('a1');
+        var b1 = document.getElementById('b1');
+        var d1 = document.getElementById('d1');
+        var a2 = document.getElementById('a2');
+        var c2 = document.getElementById('c2');
+        var d2 = document.getElementById('d2');
+        function a11(){
+            if(a1){
+                a1.style.background = 'red'
+                certo_1.style.background = 'green'
+                document.getElementById('alertaQ1').innerText = 'Você errou (*_*)'
+            }
+        }
+        function b11(){
+            if(b1){
+                b1.style.background = 'red'
+                certo_1.style.background = 'green'
+                document.getElementById('alertaQ1').innerText = 'Você errou (*_*)'
+            }
+        }
+        function d11(){
+            if(d1){
+                d1.style.background = 'red'
+                certo_1.style.background = 'green'
+                document.getElementById('alertaQ1').innerText = 'Você errou (*_*)'
+            }
+        }
+        function certo1(){
+            if(certo1){
+                certo_1.style.background = 'green'
+                document.getElementById('alertaQ1').innerText = 'Você acertou!! :)'
+            }
+        }
+        function a22(){
+            if(a2){
+                a2.style.background = 'red'
+                certo_2.style.background = 'green'
+                document.getElementById('alertaQ2').innerText = 'Você errou (*_*)'
+            }
+        }
+        function c22(){
+            if(c2){
+                c2.style.background = 'red'
+                certo_2.style.background = 'green'
+                document.getElementById('alertaQ2').innerText = 'Você errou (*_*)'
+            }
+        }
+        function d22(){
+            if(d2){
+                d2.style.background = 'red'
+                certo_2.style.background = 'green'
+                document.getElementById('alertaQ2').innerText = 'Você errou (*_*)'
+            }
+        }
+        function certo2(){
+            if(certo2){
+                certo_2.style.background = 'green'
+                document.getElementById('alertaQ2').innerText = 'Você acertou!! :)'
+            }
+        }
+        
+    </script>
+</body>
+</html>

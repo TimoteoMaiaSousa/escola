@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarta</title>
+    <style>
+
+        .imc{
+            background-color: rgba(179, 173, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+            height: 220px;
+            padding: 20px;
+            border-radius: 50px;
+            margin: 20% auto;
+        }
+        #imc{
+            width: 70px;
+            margin-left: 100px;
+        }
+        input{
+            margin-bottom: 10px;
+            height: 567800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="imc">
+        <label for="">Peso(Quilos):</label>
+        <input id="peso" type="text">
+        <label for="">Altura(Metros):</label>
+        <input id="altura" type="text">
+        <input id="imc" type="button" value="Calcular" onclick="imc()">
+        <input id="res" type="text" disabled placeholder="IMC:">
+        <input id="cond" type="text" disabled placeholder="Situação:">
+    </div>
+    <script>
+        /*IMC = peso/altura^2*/
+        function imc(){
+            var peso = document.getElementById('peso')
+            var alt = document.getElementById('altura')
+            var res = document.getElementById('res')
+            var cond = document.getElementById('cond')
+            var p = Number(peso.value)
+            var a = Number(alt.value)
+            var IMC = p / (a**2)
+            if(IMC < 18.5){
+                res.value = IMC
+                cond.value = 'Abaixo do peso'
+                cond.style.backgroundColor = 'red'
+                cond.style.color = 'aliceblue'
+            }else if(IMC > 18.5 && IMC <= 24.9){
+                res.value = IMC
+                cond.value = 'Peso normal'
+                cond.style.backgroundColor = 'green'
+                cond.style.color = 'aliceblue'
+            }else{
+                res.value = IMC
+                cond.value = 'Acima do peso'
+                cond.style.backgroundColor = 'purple'
+                cond.style.color = 'aliceblue'
+            }
+        }
+    </script>
+</body>
+</html>

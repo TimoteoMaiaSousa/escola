@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaúdeIntegral.com</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../logo.png" type="image/x-icon">
+</head>
+<body onload="carregar()">
+    <header class="header1" id="header1">
+        <img src="../logo.png" alt="">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signin.html">Inscreva-se</a></li>
+                <li><a href="page2.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="all">
+        <section class="pl">
+            <a href="poliomielite.html" class="polio">
+                <img src="../imgs/vacina-contra-poliomielite_11530_l.webp" alt="">
+                <h1>Vacina da Poliomielite (VIP/VOP): para que serve e quando tomar</h1>
+                <article>
+                    A vacina contra a poliomielite, também conhecida como paralisisa infantil, deve ser feita até aos 5 anos de idade. Veja qual o esquema de vacinação recomendado, quantas doses fazer e...
+                </article>
+            </a>
+            <a href="leptospirose.html" class="lep">
+                <img src="../imgs/leptospirose-sintomas_65792_l.webp" alt="">
+                <h1>12 sintomas de leptospirose (e o que fazer)</h1>
+                <article>
+                    Alguns dos sintomas de leptospirose são dor abdominal, mal-estar, dores no corpo, febre alta, dor de cabeça, diarreia e vômitos. Além disso, algumas pessoas também podem apresentar pequenas...
+                </article>
+            </a>
+        </section>
+        
+        <section class="s2">
+            <a href="febreoropouche.html">
+                <img src="../imgs/febre-oropouche_65371_l.webp" alt="">
+                <article>
+                    <h1>Febre oropouche: o que é, sintomas, causas e tratamento</h1>
+                    <p>A febre oropouche é uma virose que pode causar sintomas como febre e calafrios, dor no corpo e/ou atrás dos olhos, náusea ou sensação de mal-estar...</p>
+                </article>
+            </a>
+            <a href="dengue.html">
+                <img src="../imgs/dengue_63752_l.webp" alt="">
+                <article>
+                    <h1>Dengue: o que é, sintomas, tratamento e prevenção</h1>
+                    <p>A dengue é uma doença que pode provocar sintomas como febre alta, dor de cabeça, manchas vermelhas na pele, náusea, dor no abdome...</p>
+                </article>
+            </a>
+            <a href="vermes.html">
+                <img src="../imgs/remedios-para-vermes_24815_l.webp" alt="">
+                <article>
+                    <h1>10 principais remédios para vermes (e como tomar)</h1>
+                    <p>Os remédios para verme, como albendazol, medenbazol, nitazoxanida ou secnidazol, podem ser usados para o tratamento de vermes...</p>
+                </article>
+            </a>
+            <a href="malsubito.html">
+                <img src="../imgs/morte-subita_32260_l.webp" alt="">
+                <article>
+                    <h1>Mal súbito: o que é, sintomas, causas (e como evitar)</h1>
+                    <p>Mal súbito é quando o óbito acontece de forma abrupta, nas primeiras 24 horas desde o início dos sintomas, sendo que a causa mais comum é a...</p>
+                </article>
+            </a>
+        </section>
+        <h1 id="baba">Dicas profissionais para uma vida saudável</h1>
+        <section class="videos">
+            <article>
+                <iframe width="750" height="550" src="https://www.youtube.com/embed/6PVDpWX4fnY" frameborder="0"  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <h1>Melhores exercícios para a terceira idade!</h1>
+            </article>
+            <article>
+                <iframe width="750" height="550" src="https://www.youtube.com/embed/K4ULONjX2gs" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                <h1>Dieta para ganho de massa muscular.</h1>
+            </article>
+            <article>
+                <iframe width="750" height="550" src="https://www.youtube.com/embed/w6lqLoSOcLI" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                <h1>5 dicas para ter uma vida saudável</h1>
+            </article>
+            <article>
+                <iframe width="750" height="550" src="https://www.youtube.com/embed/XNhxvIMqfGM"  frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h1>Como fortalecer o sistema imunológico</h1>
+            </article>
+        </section>
+        <section class="calc">
+            <form>
+                <h1>Calculadora de IMC</h1>
+                <p>Para calcular seu IMC, por favor insira seus dados na nossa calculadora:</p>
+                <div class="sexo">
+                    <label for="sexo">Sexo:
+                    </label>
+                    <p>
+                        <input type="button" value="Mulher" name="sexo" id="fem" onclick="mulher()">
+                        <input type="button" value="Homem" name="sexo" id="masc" onclick="homem()">
+                    </p>
+                </div>
+                <div class="inputs">
+                    <label for="idade">Idade:</label>
+                    <p><input type="text" name="idade" id="idade" placeholder="Ex: 35"> anos</p>
+                    <span id="alertaIdade"></span>
+                </div>
+                <div>
+                    <label for="altura">Altura:</label>
+                    <p><input type="text" name="altura" id="altura" placeholder="Ex: 165"> cm</p>
+                    <span id="alertaAltura"></span>
+                </div>
+                <div>
+                    <label for="peso">Peso:</label>
+                    <p><input type="text" name="peso" id="peso" placeholder="Ex: 62,5"> kg</p>
+                    <span id="alertaPeso"></span>
+                </div>
+                <input type="button" value="CALCULAR" onclick="calculaimc()">
+            </form>
+            <article>
+                <aside>
+                    <p id="res"></p>
+                    <p id="resc"></p>
+                    <table class="imc" id="imc">
+                        <tr>
+                            <th></th>
+                            <th>IMC</th>
+                            <th>PESO</th>
+                        </tr>
+                        <tr class="magreza">
+                            <td>Magreza</td>
+                            <td>&lt; 16</td>
+                            <td>&lt; 46.8 kg</td>
+                        </tr>
+                        <tr class="normal">
+                            <td>Normal</td>
+                            <td>16 a 23.6</td>
+                            <td>46.8 a 69 kg</td>
+                        </tr>
+                        <tr class="sobrepeso">
+                            <td>Sobrepeso</td>
+                            <td>23.6 a 27.8</td>
+                            <td>69 a 81.3 kg</td>
+                        </tr>
+                        <tr class="obeso">
+                            <td>Obesidade</td>
+                            <td>&gt; 27.8</td>
+                            <td>&gt; 81.3 kg</td>
+                        </tr>
+                    </table>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer class="foot1" id="foot1">
+        <p>&copy; 2024. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="https://www.instagram.com/saude.integraloficial?igsh=eXh3OW1rdG40emp3"><img src="../imgs/instagram.png" alt="" id="insta"> Instagram</a></li>
+            <li>
+                <a href="https://x.com/saudeintegrall"><img src="../imgs/Twitter.png" alt="" id="twt"> Twitter
+                </a>
+            </li>
+            <li>
+                <p id="wh"><img src="../imgs/Whatsapp.png" alt="" id="whats"> Whatsapp: <br>+55 (85) 99882-5632 </p>
+            </li>
+        </ul>
+
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <img src="../logo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

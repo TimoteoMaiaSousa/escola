@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>louding</title>
+</head>
+<body>
+  <div class="calcular">
+    <input type="text" id="A" placeholder="Número">
+    <input type="text" id="B" placeholder="Número">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+    <script>
+      function calcular() {
+        var a = document.querySelector("#A").value;
+        var b = document.querySelector("#B").value;
+
+          if (parseInt(a) === parseInt(b)) {
+            var c = parseInt(a) + parseInt(b)
+            document.querySelector("#resultado").innerHTML = c
+          }
+          else if (parseInt(a) != parseInt(b))
+          var c = parseInt(a) * parseInt(b)
+          document.querySelector("#resultado").innerHTML = c
+        }
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceira</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="">1ªNota</label>
+        <input type="number"id="n1">
+        <label for="">2ªNota</label>
+        <input type="number" id="n2">
+        <label for="">3ªNota</label>
+        <input type="number" id="n3">
+        <label for="">4ªNota</label>
+        <input type="number" id="n4">
+        <input type="button" value="Calcular" id="calc" onclick="média()">
+        <input type="text" disabled id="res" placeholder="Média">
+        <input type="text" disabled id="sit" placeholder="Situação">
+    </div>
+    <script>
+        function média(){
+            var nu1 = window.document.getElementById('n1')
+            var nu2 = window.document.getElementById('n2')
+            var nu3 = window.document.getElementById('n3')
+            var nu4 = window.document.getElementById('n4')
+            var res = window.document.getElementById('res')
+            var sit = window.document.getElementById('sit')
+            var n1 = Number(nu1.value)
+            var n2 = Number(nu2.value)
+            var n3 = Number(nu3.value)
+            var n4 = Number(nu4.value)
+            var med = (n1+n2+n3+n4) / 4
+            res.value = `A média das notas é ${med}`
+            if(med >= 7){
+                sit.value = 'Aluno aprovado'
+                sit.style.backgroundColor = 'green'
+                sit.style.color =  'aliceblue'
+            }else{
+                sit.value = 'Aluno reprovado'
+                sit.style.backgroundColor = 'red'
+                sit.style.color =  'aliceblue'
+            }
+        }
+    </script>
+</body>
+</html>

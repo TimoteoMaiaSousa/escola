@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+    <style>
+        body{
+            width: 99%;
+            height: 1034px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(-40deg, #1825D9, #1862D9, #189FD9, #60B5D9, #18D9D5, #18D994);
+            background-repeat: no-repeat;
+        }
+        .luz{
+            background-image: linear-gradient(40deg, #DBE028, #41E028, #8EE028, #5FE04B, #28E053, #28E091);
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            border-radius: 80px;
+        }
+        img{
+            border-radius: 100px;
+            margin: 20px;
+        }
+        input{
+            font-size: 13pt;
+            width: 80px;
+            height: 30px;
+            border-radius: 8px;
+            margin-top: 110px;
+        }
+    </style>
+</head>
+<body>
+    <div class="luz">
+        <input id="ligar" type="button" value="Ligar" onclick="Ligar()">
+        <img id="lamp" src="luzapagada.png" alt="">
+        <input id="desligar" type="button" value="Desligar" onclick="Desligar()">
+    </div>
+    <script src="main.js">
+       
+    </script>
+</body>
+</html>

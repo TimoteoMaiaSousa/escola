@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            background-image: linear-gradient(45deg, rgba(0, 0, 255, 0.814), rgb(36, 36, 36));
+        }
+        .main{
+            width: 270px;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: rgb(220, 20, 60);
+            padding: 30px;
+            justify-content: center;
+            border-radius: 20px;
+            
+        }
+        label{
+            color: aliceblue;
+            font-size: 17pt;
+        }
+        input{
+            margin-bottom: 20px;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 15pt;
+        }
+        #check{
+            border-radius: 20px;
+            font-size: 15pt;
+            height: 40px;
+            margin: auto;
+            padding: 10px;
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <label for="">Usuário:</label><input id="user" type="text">
+        <label for="">Senha:</label><input id="senha" type="password">
+        <input id="check" type="button" value="Conferir" onclick="conferir()">
+    </div>
+    <script>
+        function conferir(){
+            aluno = 'aluno'
+            senha = '123'
+            user = document.getElementById('user')
+            sen = document.getElementById('senha')
+            check = document.getElementById('check')
+            u = user.value
+            s = sen.value
+            if(s == senha && u == aluno){
+                check.value = 'Bem vindo'
+                check.style.color = 'green'
+            }
+            if(u != aluno){
+                check.value = 'Nome de usuário incorreto'
+                check.style.color = 'red'
+            }
+            if(s != senha){
+                check.value = 'Senha incorreta'
+                check.style.color = 'red'
+            }
+            if(s == '' || u == ''){
+                check.value = 'Faltam dados'
+                check.style.color = 'red'
+            }
+        }
+    </script>
+</body>
+</html>
