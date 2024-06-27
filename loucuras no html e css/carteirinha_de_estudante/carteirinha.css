@@ -45,6 +45,22 @@
     font-weight: 800;
     line-height: 0.9em;
 }
+
+#ncr{
+    display: flex;
+    font-family: sans-serif;
+}
+#ncr div{
+    margin-right: 15px;
+}
+#ncr h4, .escola h4, .nome h4{
+    font-size: 9pt;
+    margin: 0;
+}
+#ncr p, .escola p, .nome p{
+    font-size: 10pt;
+    margin: 0;
+}
 #ufes{
     font-size: 10pt;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -56,7 +72,7 @@
     width: 200px;
     height: 53px;
     background-color: aliceblue;
-    margin-top: -10px;
+    margin-top: -9px;
     border-bottom-left-radius: 10px;
 }
 #cia{
