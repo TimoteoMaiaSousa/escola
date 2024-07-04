@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <link rel="shortcut icon" href="ampulheta.png" type="image/x-icon" style="border-radius: 50%;">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="timer">
+        <div id="timer">00:00:00</div>
+        <div class="times">
+            <div>
+                <label for="horas">Horas:</label>
+                <input type="number" name="" id="horas" max="72" min="0">
+            </div>
+            <div>
+                <label for="minutos">Minutos:</label>
+                <input type="number" name="" id="minutos" max="59" min="0">
+            </div>
+            <div>
+                <label for="segundos">Segundos:</label>
+                <input type="number" name="" id="segundos" max="59" min="0">
+            </div>
+        </div>
+        <div class="btn">
+            <button id="btn">Começar</button>
+        </div>
+    </main>
+    <script src="timer.js"></script>
+</body>
+</html>
