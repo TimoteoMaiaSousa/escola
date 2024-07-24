@@ -63,7 +63,7 @@ header{
     justify-content: center;
     font-weight: 600;
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
     *{
         margin: 0px;
         padding: 0px;
