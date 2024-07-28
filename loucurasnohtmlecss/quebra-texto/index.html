@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .com-css{
+            width: 120px;
+        }
+        .com-css p{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quebra de texto com CSS</h1>
+    <div class="com-css">
+        <p>Texto pequeno</p>
+        <p>Eu sou um texto enorme e você só vai conseguir me ler se você apertar nos três pontinhos.</p>
+    </div>
+
+<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <h1>Quebra de texto com JavaScript</h1>
+    <div class="com-js">
+        <p>Texto pequeno</p>
+        <p>Eu sou um texto enorme e você só vai conseguir me ler se você apertar nos três pontinhos.</p>
+    </div>
+    <script>
+        const elementos = document.querySelectorAll('.com-js p');
+        const LIMITE = 15;
+
+        for(let p of elementos){
+            const acimaDoLimite = p.innerText.length > LIMITE;
+            const pontosOuVazio = acimaDoLimite ? '...' : '';
+            p.innerText = p.innerText.substring(0, LIMITE) + pontosOuVazio
+        }
+    </script>
+</body>
+</html>
