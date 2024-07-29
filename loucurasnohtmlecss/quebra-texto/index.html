@@ -5,13 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        p,button{
+            font-size: 15pt;
+        }
         .com-css{
-            width: 120px;
+            max-width: 120px;
         }
         .com-css p{
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+        }
+        #btt{
+            background: transparent;
+            border: none;
+            color: #bababa;
+            font-weight: bold;
+        }
+        #btt:hover{
+            color: blue;
+        }
+        #btt:active{
+            color: #bababa;
         }
     </style>
 </head>
@@ -30,12 +45,18 @@
     </div>
     <script>
         const elementos = document.querySelectorAll('.com-js p');
-        const LIMITE = 15;
+        const LIMITE = 20;
 
         for(let p of elementos){
             const acimaDoLimite = p.innerText.length > LIMITE;
-            const pontosOuVazio = acimaDoLimite ? '...' : '';
-            p.innerText = p.innerText.substring(0, LIMITE) + pontosOuVazio
+            const pontosOuVazio = acimaDoLimite ? '<button id="btt" onclick="lermais()">...</button>' : '';
+            p.innerHTML = p.innerHTML.substring(0, LIMITE) + pontosOuVazio
+            if(pontosOuVazio == '<button id="btt">...</button>'){
+                pontosOuVazio += function lermais(){
+                    LIMITE = p.innerText.length;
+                    pontosOuVazio = 'Ocultar';
+                }
+            }
         }
     </script>
 </body>
