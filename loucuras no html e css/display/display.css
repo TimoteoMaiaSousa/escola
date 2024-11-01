@@ -1,0 +1,106 @@
+body{
+    background-image: linear-gradient(to left, black, rgb(20, 20, 20), rgb(30, 30, 30), rgb(40, 40, 40));
+}
+.display{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 370px;
+    height: 570px;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;border-radius: 10px;
+}
+.segmento{
+    width: 40px;
+    height: 200px;
+    background-color: rgba(50, 50, 50, 0.208);
+    border-radius: 20%;
+    font-size: 15pt;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.esquerda,.direita{
+    width: 40px;
+    height: 455px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    padding: 5px;
+}
+.meio{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 535px;
+    align-items: center;
+    justify-content: center;
+}
+.f,.c{
+    margin-top: 50px;
+}
+.a,.g,.d{
+    transform: rotate(90deg);
+    position: absolute;
+}
+.a{
+    margin-bottom: 500px;
+}
+.d{
+    margin-top: 500px;
+}
+.ponto{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(254, 52, 52);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+.btns{
+    position: absolute;
+    margin: 30px;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;width: 200px;
+    width: 230px;
+}
+.input{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgba(111, 111, 110, 0.495);
+    margin: 20px auto 20px;
+}
+input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.auto{
+    display: flex;
+    flex-direction: column;
+    font-size: 15pt;
+    background-color: rgba(111, 111, 110, 0.48);
+    align-items: center;
+    justify-content: center;
+    margin: 10px;padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}

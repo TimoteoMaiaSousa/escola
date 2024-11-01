@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display 7 Segmentos Web</title>
+    <link rel="stylesheet" href="display.css">
+</head>
+<body>
+    <div class="display">
+        <div class="esquerda">
+            <div class="segmento e" id="e">e</div>
+            <div class="segmento f" id="f">f</div>
+        </div>
+        <div class="meio">
+            <div class="segmento a" id="a">a</div>
+            <div class="segmento g" id="g">g</div>
+            <div class="segmento d" id="d">d</div>
+        </div>
+        <div class="esquerda">
+            <div class="segmento b" id="b">b</div>
+            <div class="segmento c" id="c">c</div>
+        </div>
+        <div class="ponto"></div>
+    </div>
+    <div class="btns">
+        <div class="input ia">
+            <input type="checkbox" name="a" id="A" onclick="ligdesl()">
+            <label for="a">A</label>
+        </div>
+        <div class="input ib">
+            <input type="checkbox" name="b" id="B" onclick="ligdesl()">
+            <label for="b">B</label>
+        </div>
+        <div class="input ic">
+            <input type="checkbox" name="c" id="C" onclick="ligdesl()">
+            <label for="c">C</label>
+        </div>
+        <div class="input id">
+            <input type="checkbox" name="d" id="D" onclick="ligdesl()">
+            <label for="d">D</label>
+        </div>
+        <div class="input ie">
+            <input type="checkbox" name="e" id="E" onclick="ligdesl()">
+            <label for="e">E</label>
+        </div>
+        <div class="input if">
+            <input type="checkbox" name="f" id="F" onclick="ligdesl()">
+            <label for="f">F</label>
+        </div>
+        <div class="input ig">
+            <input type="checkbox" name="g" id="G" onclick="ligdesl()">
+            <label for="g">G</label>
+        </div>
+        <div class="auto" id="autoc">
+            <label>Contagem automática</label>
+            <input type="checkbox" name="auto" id="auto" onclick="autoCont()">
+            <label for="">Limpar seleção</label>
+            <input type="checkbox" name="auto" id="lpselc" onclick="limpar()">
+        </div>
+    </div>
+    <script>
+        let a = document.getElementById('a');
+        let b = document.getElementById('b');
+        let c = document.getElementById('c');
+        let d = document.getElementById('d');
+        let e = document.getElementById('e');
+        let f = document.getElementById('f');
+        let g = document.getElementById('g');
+
+        let A = document.getElementById('A');
+        let B = document.getElementById('B');
+        let C = document.getElementById('C');
+        let D = document.getElementById('D');
+        let E = document.getElementById('E');
+        let F = document.getElementById('F');
+        let G = document.getElementById('G');
+
+        let autoC = document.getElementById('auto');
+        let auto = document.getElementById('autoc');
+        let apaga = document.getElementById('lpselc');
+
+        let vermelho = "rgb(254, 52, 52)";
+        let preto = "rgba(50, 50, 50, 0.208)";
+        function ligdesl(){
+            if(A.checked){
+            a.style.backgroundColor = vermelho;
+            }else{
+                a.style.backgroundColor = preto;
+            }
+            if(B.checked){
+                b.style.backgroundColor = vermelho;
+            }else{
+                b.style.backgroundColor = preto;
+            }
+            if(C.checked){
+                c.style.backgroundColor = vermelho;
+            }else{
+                c.style.backgroundColor = preto;
+            }
+            if(D.checked){
+                d.style.backgroundColor = vermelho;
+            }else{
+                d.style.backgroundColor = preto;
+            }
+            if(E.checked){
+                e.style.backgroundColor = vermelho;
+            }else{
+                e.style.backgroundColor = preto;
+            }
+            if(F.checked){
+                f.style.backgroundColor = vermelho;
+            }else{
+                f.style.backgroundColor = preto;
+            }
+            if(G.checked){
+                g.style.backgroundColor = vermelho;
+            }else{
+                g.style.backgroundColor = preto;
+            }
+        }
+        function escreve1(){
+            A.checked = false;
+            B.checked = true;
+            C.checked = true;
+            D.checked = false;
+            E.checked = false;
+            F.checked = false;
+            G.checked = false;
+            ligdesl();
+        }
+        function escreve2(){
+            A.checked = true;
+            B.checked = true;
+            C.checked = false;
+            D.checked = true;
+            E.checked = false;
+            F.checked = true;
+            G.checked = true;
+
+            ligdesl();
+        }
+        function escreve3(){
+            A.checked = true;
+            B.checked = true;
+            C.checked = true;
+            D.checked = true;
+            E.checked = false;
+            F.checked = false;
+            G.checked = true;
+            ligdesl();
+        }
+        function escreve4(){
+            A.checked = false;
+            B.checked = true;
+            C.checked = true;
+            D.checked = false;
+            E.checked = true;
+            F.checked = false;
+            G.checked = true;
+            ligdesl();
+        }
+        function escreve5(){
+            A.checked = true;
+            B.checked = false;
+            C.checked = true;
+            D.checked = true;
+            E.checked = true;
+            F.checked = false;
+            G.checked = true;
+            ligdesl();
+        }
+        function escreve6(){
+            A.checked = true;
+            B.checked = false;
+            C.checked = true;
+            D.checked = true;
+            E.checked = true;
+            F.checked = true;
+            G.checked = true;
+            ligdesl();
+        }
+        function escreve7(){
+            A.checked = true;
+            B.checked = true;
+            C.checked = true;
+            D.checked = false;
+            E.checked = false;
+            F.checked = false;
+            G.checked = false;
+            ligdesl();
+        }
+        function escreve8(){
+            A.checked = true;
+            B.checked = true;
+            C.checked = true;
+            D.checked = true;
+            E.checked = true;
+            F.checked = true;
+            G.checked = true;
+            ligdesl();
+        }
+        function escreve9(){
+            A.checked = true;
+            B.checked = true;
+            C.checked = true;
+            D.checked = false;
+            E.checked = true;
+            F.checked = false;
+            G.checked = true;
+            ligdesl();
+        }
+        function escreve0(){
+            A.checked = true;
+            B.checked = true;
+            C.checked = true;
+            D.checked = true;
+            E.checked = true;
+            F.checked = true;
+            G.checked = false;
+            ligdesl();
+        }
+        function limpar(){
+            !autoCont;
+            if(apaga.checked){
+                A.checked = false;
+                B.checked = false;
+                C.checked = false;
+                D.checked = false;
+                E.checked = false;
+                F.checked = false;
+                G.checked = false;
+                if(A.checked){
+                a.style.backgroundColor = vermelho;
+                }else{
+                    a.style.backgroundColor = preto;
+                }
+                if(B.checked){
+                    b.style.backgroundColor = vermelho;
+                }else{
+                    b.style.backgroundColor = preto;
+                }
+                if(C.checked){
+                    c.style.backgroundColor = vermelho;
+                }else{
+                    c.style.backgroundColor = preto;
+                }
+                if(D.checked){
+                    d.style.backgroundColor = vermelho;
+                }else{
+                    d.style.backgroundColor = preto;
+                }
+                if(E.checked){
+                    e.style.backgroundColor = vermelho;
+                }else{
+                    e.style.backgroundColor = preto;
+                }
+                if(F.checked){
+                    f.style.backgroundColor = vermelho;
+                }else{
+                    f.style.backgroundColor = preto;
+                }
+                if(G.checked){
+                    g.style.backgroundColor = vermelho;
+                }else{
+                    g.style.backgroundColor = preto;
+                }
+                
+            }
+        }
+        function limp(){
+            A.checked = false;
+            B.checked = false;
+            C.checked = false;
+            D.checked = false;
+            E.checked = false;
+            F.checked = false;
+            G.checked = false;
+            a.style.backgroundColor = preto;
+            b.style.backgroundColor = preto;
+            c.style.backgroundColor = preto;
+            d.style.backgroundColor = preto;
+            e.style.backgroundColor = preto;
+            f.style.backgroundColor = preto;
+            g.style.backgroundColor = preto;
+        }
+        function autoCont(){
+            escreve0();
+            setTimeout(escreve1,1000);
+            setTimeout(escreve2,2000);
+            setTimeout(escreve3, 3000);
+            setTimeout(escreve4, 4000);
+            setTimeout(escreve5, 5000);
+            setTimeout(escreve6, 6000);
+            setTimeout(escreve7, 7000);
+            setTimeout(escreve8, 8000);
+            setTimeout(escreve9, 9000);
+            setTimeout(limp, 9500);
+        }
+        
+        if(autoC.checked){
+            autoCont();
+        }
+    </script>
+</body>
+</html>
