@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p,button{
+            font-size: 15pt;
+        }
+        .com-css{
+            max-width: 120px;
+        }
+        .com-css p{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        #btt{
+            background: transparent;
+            border: none;
+            color: #bababa;
+            font-weight: bold;
+        }
+        #btt:hover{
+            color: blue;
+        }
+        #btt:active{
+            color: #bababa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quebra de texto com CSS</h1>
+    <div class="com-css">
+        <p>Texto pequeno</p>
+        <p>Eu sou um texto enorme e você só vai conseguir me ler se você apertar nos três pontinhos.</p>
+    </div>
+
+<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <h1>Quebra de texto com JavaScript</h1>
+    <div class="com-js">
+        <p>Texto pequeno</p>
+        <p>Eu sou um texto enorme e você só vai conseguir me ler se você apertar nos três pontinhos.</p>
+    </div>
+    <script>
+        const elementos = document.querySelectorAll('.com-js p');
+        const LIMITE = 20;
+
+        for(let p of elementos){
+            const acimaDoLimite = p.innerText.length > LIMITE;
+            const pontosOuVazio = acimaDoLimite ? '<button id="btt" onclick="lermais()">...</button>' : '';
+            p.innerHTML = p.innerHTML.substring(0, LIMITE) + pontosOuVazio
+            if(pontosOuVazio == '<button id="btt">...</button>'){
+                pontosOuVazio += function lermais(){
+                    LIMITE = p.innerText.length;
+                    pontosOuVazio = 'Ocultar';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
