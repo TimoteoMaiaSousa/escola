@@ -22,42 +22,40 @@
             <div class="segmento b" id="b">b</div>
             <div class="segmento c" id="c">c</div>
         </div>
-        <div class="ponto"></div>
+        <div class="ponto" id="ponto"></div>
     </div>
     <div class="btns">
         <div class="input ia">
-            <input type="checkbox" name="a" id="A" onclick="ligdesl()">
+            <input type="checkbox" name="a" id="A" class="inputs" onclick="ligdesl()">
             <label for="a">A</label>
         </div>
         <div class="input ib">
-            <input type="checkbox" name="b" id="B" onclick="ligdesl()">
+            <input type="checkbox" name="b" id="B" class="inputs" onclick="ligdesl()">
             <label for="b">B</label>
         </div>
         <div class="input ic">
-            <input type="checkbox" name="c" id="C" onclick="ligdesl()">
+            <input type="checkbox" name="c" id="C" class="inputs" onclick="ligdesl()">
             <label for="c">C</label>
         </div>
         <div class="input id">
-            <input type="checkbox" name="d" id="D" onclick="ligdesl()">
+            <input type="checkbox" name="d" id="D" class="inputs" onclick="ligdesl()">
             <label for="d">D</label>
         </div>
         <div class="input ie">
-            <input type="checkbox" name="e" id="E" onclick="ligdesl()">
+            <input type="checkbox" name="e" id="E" class="inputs" onclick="ligdesl()">
             <label for="e">E</label>
         </div>
         <div class="input if">
-            <input type="checkbox" name="f" id="F" onclick="ligdesl()">
+            <input type="checkbox" name="f" id="F" class="inputs" onclick="ligdesl()">
             <label for="f">F</label>
         </div>
         <div class="input ig">
-            <input type="checkbox" name="g" id="G" onclick="ligdesl()">
+            <input type="checkbox" name="g" id="G" class="inputs" onclick="ligdesl()">
             <label for="g">G</label>
         </div>
         <div class="auto" id="autoc">
-            <label>Contagem automática</label>
-            <input type="checkbox" name="auto" id="auto" onclick="autoCont()">
-            <label for="">Limpar seleção</label>
-            <input type="checkbox" name="auto" id="lpselc" onclick="limpar()">
+            <input type="button" value="Contagem automática" id="auto" onclick="autoCont()">
+            <input type="button" value="Limpar seleção" id="lpselc" onclick="limpar()">
         </div>
     </div>
     <script>
@@ -68,7 +66,7 @@
         let e = document.getElementById('e');
         let f = document.getElementById('f');
         let g = document.getElementById('g');
-
+        let p = document.getElementById('ponto');
         let A = document.getElementById('A');
         let B = document.getElementById('B');
         let C = document.getElementById('C');
@@ -76,9 +74,8 @@
         let E = document.getElementById('E');
         let F = document.getElementById('F');
         let G = document.getElementById('G');
-
+        let inputs = document.getElementsByClassName('inputs');
         let autoC = document.getElementById('auto');
-        let auto = document.getElementById('autoc');
         let apaga = document.getElementById('lpselc');
 
         let vermelho = "rgb(254, 52, 52)";
@@ -222,51 +219,33 @@
             ligdesl();
         }
         function limpar(){
-            !autoCont;
-            if(apaga.checked){
+            if(A.checked){
+                a.style.backgroundColor = preto;
                 A.checked = false;
+            }
+            if(B.checked){
+                b.style.backgroundColor = preto;
                 B.checked = false;
+            }
+            if(C.checked){
+                c.style.backgroundColor = preto;
                 C.checked = false;
+            }
+            if(D.checked){
+                d.style.backgroundColor = preto;
                 D.checked = false;
+            }
+            if(E.checked){
+                e.style.backgroundColor = preto;
                 E.checked = false;
+            }
+            if(F.checked){
+                f.style.backgroundColor = preto;
                 F.checked = false;
+            }
+            if(G.checked){
+                g.style.backgroundColor = preto;
                 G.checked = false;
-                if(A.checked){
-                a.style.backgroundColor = vermelho;
-                }else{
-                    a.style.backgroundColor = preto;
-                }
-                if(B.checked){
-                    b.style.backgroundColor = vermelho;
-                }else{
-                    b.style.backgroundColor = preto;
-                }
-                if(C.checked){
-                    c.style.backgroundColor = vermelho;
-                }else{
-                    c.style.backgroundColor = preto;
-                }
-                if(D.checked){
-                    d.style.backgroundColor = vermelho;
-                }else{
-                    d.style.backgroundColor = preto;
-                }
-                if(E.checked){
-                    e.style.backgroundColor = vermelho;
-                }else{
-                    e.style.backgroundColor = preto;
-                }
-                if(F.checked){
-                    f.style.backgroundColor = vermelho;
-                }else{
-                    f.style.backgroundColor = preto;
-                }
-                if(G.checked){
-                    g.style.backgroundColor = vermelho;
-                }else{
-                    g.style.backgroundColor = preto;
-                }
-                
             }
         }
         function limp(){
@@ -285,8 +264,12 @@
             f.style.backgroundColor = preto;
             g.style.backgroundColor = preto;
         }
+        function ptpreto(){
+            p.style.backgroundColor = preto;
+        }
         function autoCont(){
             escreve0();
+            p.style.backgroundColor = vermelho;
             setTimeout(escreve1,1000);
             setTimeout(escreve2,2000);
             setTimeout(escreve3, 3000);
@@ -297,6 +280,7 @@
             setTimeout(escreve8, 8000);
             setTimeout(escreve9, 9000);
             setTimeout(limp, 9500);
+            setTimeout(ptpreto, 9500);
         }
         
         if(autoC.checked){
