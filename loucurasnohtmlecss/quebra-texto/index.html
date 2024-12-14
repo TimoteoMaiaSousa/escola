@@ -28,6 +28,9 @@
         #btt:active{
             color: #bababa;
         }
+        .com-js{
+            width: 200px;
+        }
     </style>
 </head>
 <body>
@@ -45,18 +48,12 @@
     </div>
     <script>
         const elementos = document.querySelectorAll('.com-js p');
-        const LIMITE = 20;
-
+        var LIMITE = 30;
         for(let p of elementos){
-            const acimaDoLimite = p.innerText.length > LIMITE;
-            const pontosOuVazio = acimaDoLimite ? '<button id="btt" onclick="lermais()">...</button>' : '';
+            var qntdCaracteres = p.innerText.length;
+            var acimaDoLimite = qntdCaracteres > LIMITE;
+            var pontosOuVazio = acimaDoLimite ? '<button id="btt" onclick="lermais()">...</button>' : '';
             p.innerHTML = p.innerHTML.substring(0, LIMITE) + pontosOuVazio
-            if(pontosOuVazio == '<button id="btt">...</button>'){
-                pontosOuVazio += function lermais(){
-                    LIMITE = p.innerText.length;
-                    pontosOuVazio = 'Ocultar';
-                }
-            }
         }
     </script>
 </body>
