@@ -1,0 +1,14 @@
+body {
+    background-color: white;
+}
+
+div {
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    inset: 0;
+    border: 3px solid black;
+}
+

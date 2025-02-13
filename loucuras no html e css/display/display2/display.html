@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display de Sete Segmentos - Contagem</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            margin: 0;
+        }
+        .display {
+            position: relative;
+            width: 200px;
+            height: 400px;
+            background-color: #ccc; /* Base cinza claro */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px; /* Espaço entre a base e os segmentos */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        .segment {
+            position: absolute;
+            background-color: #ff4757;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            opacity: 0.2; /* Apagado */
+            transition: opacity 0.3s;
+        }
+        .a { width: 140px; height: 30px; top: 0; left: 30px; }
+        .b { width: 30px; height: 140px; top: 30px; right: 0; }
+        .c { width: 30px; height: 140px; bottom: 30px; right: 0; }
+        .d { width: 140px; height: 30px; bottom: 0; left: 30px; }
+        .e { width: 30px; height: 140px; bottom: 30px; left: 0; }
+        .f { width: 30px; height: 140px; top: 30px; left: 0; }
+        .g { width: 140px; height: 30px; top: 185px; left: 30px; }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4757;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e84118;
+        }
+    </style>
+</head>
+<body>
+    <div class="display">
+        <div class="segment a"></div>
+        <div class="segment b"></div>
+        <div class="segment c"></div>
+        <div class="segment d"></div>
+        <div class="segment e"></div>
+        <div class="segment f"></div>
+        <div class="segment g"></div>
+    </div>
+    <button id="startButton">Iniciar Contagem</button>
+
+    <script>
+        const segments = {
+            0: ['a', 'b', 'c', 'd', 'e', 'f'],
+            1: ['b', 'c'],
+            2: ['a', 'b', 'd', 'e', 'g'],
+            3: ['a', 'b', 'c', 'd', 'g'],
+            4: ['b', 'c', 'f', 'g'],
+            5: ['a', 'c', 'd', 'f', 'g'],
+            6: ['a', 'c', 'd', 'e', 'f', 'g'],
+            7: ['a', 'b', 'c'],
+            8: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
+            9: ['a', 'b', 'c', 'd', 'f', 'g']
+        };
+
+        const segmentElements = document.querySelectorAll('.segment');
+        const startButton = document.getElementById('startButton');
+
+        function resetDisplay() {
+            segmentElements.forEach(segment => {
+                segment.style.opacity = '0.2'; // Cor apagada
+            });
+        }
+
+        function lightUpSegments(number) {
+            resetDisplay();
+            segments[number].forEach(segment => {
+                document.querySelector(`.${segment}`).style.opacity = '1'; // Acende o segmento
+            });
+        }
+
+        startButton.addEventListener('click', () => {
+            resetDisplay();
+            let count = 0;
+            const interval = setInterval(() => {
+                lightUpSegments(count);
+                count++;
+                if (count > 9) {
+                    clearInterval(interval);
+                    setTimeout(resetDisplay, 1000); // Retorna ao estado inicial após 1 segundo
+                }
+            }, 1000); // A cada 1 segundo
+        });
+    </script>
+</body>
+</html>
