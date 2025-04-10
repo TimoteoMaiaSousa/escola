@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
@@ -9,9 +6,10 @@ void main() {
         child: Container(
           width: 300,
           height: 300,
-          padding: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
-            color: Color.fromARGB(209, 46, 206, 32),
+            color: const Color.fromARGB(209, 46, 206, 32),
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Center(
