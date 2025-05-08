@@ -17,3 +17,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - imagens/bolo.jpg
+    - imagens/bololaranja.webp
+    - imagens/bolocenoura.webp
+    - imagens/receitas.jpg
