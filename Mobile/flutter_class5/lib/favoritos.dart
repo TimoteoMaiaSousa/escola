@@ -1,27 +1,18 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class Favoritos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+      appBar: AppBar(
             title: const Text(
-              'Receitas do Chef Mauro',
+              'Favoritos',
               style: TextStyle(color: Colors.white),
             ),
             toolbarHeight: 70,
             backgroundColor: const Color.fromARGB(255, 255, 151, 82)),
         body: CustomScrollView(
           slivers: [
-            SliverAppBar(
-              expandedHeight: 300,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Image.asset(
-                  'imagens/receitas.jpg',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
             SliverList(
                 delegate: SliverChildListDelegate([
               Padding(
@@ -86,7 +77,7 @@ class HomePage extends StatelessWidget {
                                   color: Color.fromARGB(255, 255, 151, 82),
                                 ), // Ícone de seta para a direita (estilo iOS)
                                 onPressed: () {
-                                  Navigator.pushNamed(context, '/chocolate');
+                                  Navigator.pushNamed(context, '/choc');
                                 },
                               ),
                             ),
@@ -160,7 +151,7 @@ class HomePage extends StatelessWidget {
                                   color: Color.fromARGB(255, 255, 151, 82),
                                 ), // Ícone de seta para a direita (estilo iOS)
                                 onPressed: () {
-                                  Navigator.pushNamed(context, '/laranja');
+                                  Navigator.pushNamed(context, '/lar');
                                 },
                               ),
                             ),
@@ -234,7 +225,7 @@ class HomePage extends StatelessWidget {
                                   color: Color.fromARGB(255, 255, 151, 82),
                                 ), // Ícone de seta para a direita (estilo iOS)
                                 onPressed: () {
-                                  Navigator.pushNamed(context, '/cenoura');
+                                  Navigator.pushNamed(context, '/cen');
                                 },
                               ),
                             ),
@@ -248,6 +239,7 @@ class HomePage extends StatelessWidget {
               ),
             ])),
           ],
-        ));
+        )
+    );
   }
 }
