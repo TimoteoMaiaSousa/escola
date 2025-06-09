@@ -1,0 +1,228 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "flutter_class1",
+            "cwd": "flutter_class1",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class1 (profile mode)",
+            "cwd": "flutter_class1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class1 (release mode)",
+            "cwd": "flutter_class1",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class10",
+            "cwd": "flutter_class10",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class10 (profile mode)",
+            "cwd": "flutter_class10",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class10 (release mode)",
+            "cwd": "flutter_class10",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class2",
+            "cwd": "flutter_class2",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class2 (profile mode)",
+            "cwd": "flutter_class2",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class2 (release mode)",
+            "cwd": "flutter_class2",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class3",
+            "cwd": "flutter_class3",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class3 (profile mode)",
+            "cwd": "flutter_class3",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class3 (release mode)",
+            "cwd": "flutter_class3",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class4",
+            "cwd": "flutter_class4",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class4 (profile mode)",
+            "cwd": "flutter_class4",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class4 (release mode)",
+            "cwd": "flutter_class4",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class5",
+            "cwd": "flutter_class5",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class5 (profile mode)",
+            "cwd": "flutter_class5",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class5 (release mode)",
+            "cwd": "flutter_class5",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class6",
+            "cwd": "flutter_class6",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class6 (profile mode)",
+            "cwd": "flutter_class6",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class6 (release mode)",
+            "cwd": "flutter_class6",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class7",
+            "cwd": "flutter_class7",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class7 (profile mode)",
+            "cwd": "flutter_class7",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class7 (release mode)",
+            "cwd": "flutter_class7",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class8",
+            "cwd": "flutter_class8",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class8 (profile mode)",
+            "cwd": "flutter_class8",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class8 (release mode)",
+            "cwd": "flutter_class8",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_class9",
+            "cwd": "flutter_class9",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_class9 (profile mode)",
+            "cwd": "flutter_class9",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_class9 (release mode)",
+            "cwd": "flutter_class9",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "flutter_sla",
+            "cwd": "flutter_class3\\flutter_sla",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_sla (profile mode)",
+            "cwd": "flutter_class3\\flutter_sla",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_sla (release mode)",
+            "cwd": "flutter_class3\\flutter_sla",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
 import 'package:flutter_class5/favoritos.dart';
 import 'package:flutter_class5/perfil.dart';
-import 'package:flutter_class5/laranja.dart';
-import 'package:flutter_class5/cenoura.dart';
-import 'package:flutter_class5/chocolate.dart';
+import 'package:flutter_class5/rotas.dart';
 void main(){
   runApp(ReceitasApp());
-  runApp(ReceitasApp2());
   runApp(MenuInferiorR());
 }
 class ReceitasApp extends StatelessWidget {
@@ -18,45 +14,6 @@ class ReceitasApp extends StatelessWidget {
         primarySwatch: Colors.amber
       ),
       home: Rotas(),
-    );
-  }
-}
-class ReceitasApp2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.amber
-      ),
-      home: Rotas2(),
-    );
-  }
-}
-class Rotas extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/chocolate': (context) => Chocolate(),
-        '/laranja': (context) => Laranja(),
-        '/cenoura': (context) => Cenoura(),
-      },
-    );
-  }
-}
-class Rotas2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => Favoritos(),
-        '/chocolate': (context) => Chocolate(),
-        '/laranja': (context) => Laranja(),
-        '/cenoura': (context) => Cenoura(),
-      },
     );
   }
 }
@@ -71,7 +28,7 @@ class _MenuInferiorRState extends State<MenuInferiorR> {
   final List<Widget> _telas = [
     ReceitasApp(),
     Perfil(),
-    ReceitasApp2(),
+    Favoritos()
   ];
   @override
   Widget build(BuildContext context) {
