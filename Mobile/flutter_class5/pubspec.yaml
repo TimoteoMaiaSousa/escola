@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  device_preview: ^0.8.0 # Use a versão mais recente
 
 dev_dependencies:
   flutter_test:
@@ -23,3 +24,4 @@ flutter:
     - imagens/bolocenoura.webp
     - imagens/receitas.jpg
     - imagens/user1.jpg
+    - imagens/logo.png

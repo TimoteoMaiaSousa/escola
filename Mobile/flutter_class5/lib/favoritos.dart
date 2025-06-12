@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_class5/rotas.dart';
-
-void main(){
-  runApp(Rota());
-}
 
 class Favoritos extends StatelessWidget {
   @override

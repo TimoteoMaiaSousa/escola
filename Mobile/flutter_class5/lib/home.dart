@@ -1,20 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:device_preview/device_preview.dart';
+import 'main2.dart';
+
+void main(){
+  runApp(DevicePreview(
+    enabled: true,
+    builder:(context) => ReceitasApp())
+    );
+  runApp(
+    DevicePreview(
+    enabled: true,
+    builder:(context) => MenuInferiorR())
+  );
+}
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: const Text(
-              'Receitas do Chef Mauro',
-              style: TextStyle(color: Colors.white),
+          title: const Text(
+            'Receitas do Chef Tim',
+            style: TextStyle(color: Colors.white),
+          ),
+          toolbarHeight: 70,
+          backgroundColor: const Color.fromARGB(255, 255, 151, 82),
+          leading: Padding(
+            padding: const EdgeInsets.all(0),
+            child: Container(
+              width: 200,
+              height: 200,
+              child: Image.asset(
+                'imagens/logo.png', fit: BoxFit.cover,
+              ),
             ),
-            toolbarHeight: 70,
-            backgroundColor: const Color.fromARGB(255, 255, 151, 82)),
+          ),
+        ),
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
-              expandedHeight: 300,
+              expandedHeight: 180,
               flexibleSpace: FlexibleSpaceBar(
                 background: Image.asset(
                   'imagens/receitas.jpg',
@@ -25,7 +50,7 @@ class HomePage extends StatelessWidget {
             SliverList(
                 delegate: SliverChildListDelegate([
               Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(10),
                 child: Container(
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
@@ -51,7 +76,7 @@ class HomePage extends StatelessWidget {
                                 width: 16,
                               ),
                               Text(
-                                "Bolo de chocolate delicioso",
+                                "Bolo de\nchocolate\ndelicioso",
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 255, 151, 82),
                                     fontSize: 15,
@@ -125,7 +150,7 @@ class HomePage extends StatelessWidget {
                                 width: 16,
                               ),
                               Text(
-                                "Bolo de laranja com glacê",
+                                "Bolo de\nlaranja\ncom glacê",
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 255, 151, 82),
                                     fontSize: 15,
@@ -199,7 +224,7 @@ class HomePage extends StatelessWidget {
                                 width: 16,
                               ),
                               Text(
-                                "Bolo de cenoura com ganache",
+                                "Bolo de\ncenoura\ncom ganache",
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 255, 151, 82),
                                     fontSize: 15,
