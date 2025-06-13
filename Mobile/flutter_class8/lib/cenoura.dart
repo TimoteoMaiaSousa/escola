@@ -7,7 +7,7 @@ class Cenoura extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: 400,
+            expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.asset(
                 'imagens/bolocenoura.webp',

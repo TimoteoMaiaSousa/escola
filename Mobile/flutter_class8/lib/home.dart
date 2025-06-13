@@ -24,9 +24,9 @@ class _HomePageState extends State<HomePage> {
       case 0:
         return const Receitas();
       case 1:
-        return const MinhaConta();
+        return MinhaConta();
       case 2:
-        return const Favoritos();
+        return Favoritos();
       default:
         return const Receitas();
     }
@@ -36,8 +36,23 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Receitas'),
-      ),
+          title: const Text(
+            'Receitas do Chef Tim',
+            style: TextStyle(color: Colors.white),
+          ),
+          toolbarHeight: 70,
+          backgroundColor: const Color.fromARGB(255, 255, 151, 82),
+          leading: Padding(
+            padding: const EdgeInsets.all(0),
+            child: Container(
+              width: 200,
+              height: 200,
+              child: Image.asset(
+                'imagens/logo.png', fit: BoxFit.cover,
+              ),
+            ),
+          ),
+        ),
       body: _getBody(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

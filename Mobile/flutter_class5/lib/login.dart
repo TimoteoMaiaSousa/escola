@@ -25,13 +25,6 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          textTheme: ThemeData.light().textTheme.copyWith(
-                bodyMedium: const TextStyle(fontFamily: 'Poppins'),
-                bodySmall: const TextStyle(fontFamily: 'Poppins'),
-                headlineLarge: const TextStyle(fontFamily: 'Poppins'),
-              ),
-        ),
         home: Scaffold(
           body: Center(
             child: Stack(

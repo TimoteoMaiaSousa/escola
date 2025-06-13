@@ -94,7 +94,8 @@ class HomePage extends StatelessWidget {
                               Text("40 min",
                                   style: TextStyle(
                                       color:
-                                          Color.fromARGB(255, 255, 151, 82))),
+                                          Color.fromARGB(255, 255, 151, 82))
+                              ),
                             ],
                           ),
                           Padding(

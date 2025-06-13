@@ -11,42 +11,213 @@ class Receitas extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Chocolate()),
-                );
-              },
-              child: const Text('Receita de Chocolate'),
+          OutlinedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Chocolate()),
+              );
+            },
+            style: OutlinedButton.styleFrom(
+              side: BorderSide.none,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0.0)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Container(
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(
+                          255, 255, 151, 82), // Cor da borda
+                      width: 1.0, // Largura da borda em pixels
+                      style: BorderStyle.solid,
+                    ),
+                    borderRadius: BorderRadius.circular(10.0)),
+                child: const Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image(
+                                image: AssetImage('imagens/bolo.jpg'),
+                                height: 70),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Text(
+                              "Bolo de\nchocolate\ndelicioso",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 151, 82),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Icon(Icons.timer,
+                                size: 20,
+                                color: Color.fromARGB(255, 255, 151, 82)),
+                            SizedBox(
+                              width: 4,
+                            ),
+                            Text("40 min",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 255, 151, 82),
+                                    fontSize: 10,
+                                )
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Cenoura()),
-                );
-              },
-              child: const Text('Receita de Cenoura'),
+          
+          OutlinedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Laranja()),
+              );
+            },
+            style: OutlinedButton.styleFrom(
+              side: BorderSide.none,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0.0)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Container(
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(
+                          255, 255, 151, 82), // Cor da borda
+                      width: 1.0, // Largura da borda em pixels
+                      style: BorderStyle.solid,
+                    ),
+                    borderRadius: BorderRadius.circular(10.0)),
+                child: const Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image(
+                                image: AssetImage('imagens/bololaranja.webp'),
+                                height: 70),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Text(
+                              "Bolo de\nlaranja\ncom glacê",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 151, 82),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Icon(Icons.timer,
+                                size: 20,
+                                color: Color.fromARGB(255, 255, 151, 82)),
+                            SizedBox(
+                              width: 4,
+                            ),
+                            Text("1 - 2 horas",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 255, 151, 82),
+                                    fontSize: 10,
+                                )
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Laranja()),
-                );
-              },
-              child: const Text('Receita de Laranja'),
+          
+          OutlinedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Cenoura()),
+              );
+            },
+            style: OutlinedButton.styleFrom(
+              side: BorderSide.none,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0.0)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Container(
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(
+                          255, 255, 151, 82), // Cor da borda
+                      width: 1.0, // Largura da borda em pixels
+                      style: BorderStyle.solid,
+                    ),
+                    borderRadius: BorderRadius.circular(10.0)),
+                child: const Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image(
+                                image: AssetImage('imagens/bolocenoura.webp'),
+                                height: 70),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            Text(
+                              "Bolo de\ncenoura\ncom ganache",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 151, 82),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(
+                              width: 14,
+                            ),
+                            Icon(Icons.timer,
+                                size: 20,
+                                color: Color.fromARGB(255, 255, 151, 82)),
+                            SizedBox(
+                              width: 4,
+                            ),
+                            Text("1 hora",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 255, 151, 82),
+                                    fontSize: 10,
+                                )
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
+          
         ],
       ),
     );
