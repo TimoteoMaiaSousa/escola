@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-
+import 'package:device_preview/device_preview.dart';
+import 'login.dart';
 void main() {
-  runApp(const MainApp());
+  runApp(DevicePreview(
+    enabled: true,
+    builder:(context) => ReceitasApp()
+  ));
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class ReceitasApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      title: 'Receitas App',
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
       ),
+      home: Login(),
     );
   }
 }

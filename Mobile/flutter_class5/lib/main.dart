@@ -15,7 +15,7 @@ class ReceitasApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber
       ),
-      home: Rota(),
+      home: Login(),
     );
   }
 }
