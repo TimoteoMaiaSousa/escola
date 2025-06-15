@@ -19,6 +19,7 @@ class _MenuInferiorState extends State<MenuInferior> {
     Nubenk(),
     Spotifai(),
   ];
+    // ignore: unused_element
     void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
