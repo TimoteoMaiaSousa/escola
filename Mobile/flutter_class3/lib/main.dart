@@ -5,7 +5,7 @@ void main() {
 }
 
 class MainApp extends StatelessWidget {
-  MainApp({super.key});
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +26,18 @@ class MainApp extends StatelessWidget {
                 Container(
                   width: 200,
                   height: 200,
-                  color: Color.fromARGB(255, 164, 200, 225),
+                  color: const Color.fromARGB(255, 164, 200, 225),
                   
                 ),
                 Container(
                   width: 190,
                   height: 190,
-                  color: Color.fromARGB(255, 178, 224, 246),
+                  color: const Color.fromARGB(255, 178, 224, 246),
                 ),
                 Container(
                   width: 180,
                   height: 180,
-                  color: Color.fromARGB(255, 135, 206, 235),
+                  color: const Color.fromARGB(255, 135, 206, 235),
                   
                 ),
                 Container(
@@ -49,7 +49,7 @@ class MainApp extends StatelessWidget {
                 Container(
                   width: 160,
                   height: 160,
-                  color: Color.fromARGB(255, 162, 194, 224),
+                  color: const Color.fromARGB(255, 162, 194, 224),
                 ),
                 Container(
                   width: 150,
@@ -60,7 +60,7 @@ class MainApp extends StatelessWidget {
                 Container(
                   width: 140,
                   height: 140,
-                  color: Color.fromARGB(255, 0, 191, 255),
+                  color: const Color.fromARGB(255, 0, 191, 255),
                   
                 ),
                 Container(
@@ -71,70 +71,70 @@ class MainApp extends StatelessWidget {
                 Container(
                   width: 120,
                   height: 120,
-                  color: Color.fromARGB(255, 0, 0, 128),
+                  color: const Color.fromARGB(255, 0, 0, 128),
                   
                 ),
                 Container(
                   width: 110,
                   height: 110,
-                  color: Color.fromARGB(255, 0, 71, 171),
+                  color: const Color.fromARGB(255, 0, 71, 171),
                   
                 ),
                 Container(
                   width: 100,
                   height: 100,
-                  color: Color.fromARGB(255, 0, 51, 102),
+                  color: const Color.fromARGB(255, 0, 51, 102),
                 ),
                 Container(
                   width: 90,
                   height: 90,
-                  color: Color.fromARGB(255, 30, 144, 255),
+                  color: const Color.fromARGB(255, 30, 144, 255),
                   
                 ),
                 Container(
                   width:80,
                   height: 80,
-                  color: Color.fromARGB(255, 0, 255, 255),
+                  color: const Color.fromARGB(255, 0, 255, 255),
                   
                 ),
                 Container(
                   width: 70,
                   height: 70,
-                  color: Color.fromARGB(255, 59, 89, 152),
+                  color: const Color.fromARGB(255, 59, 89, 152),
                 ),
                 Container(
                   width: 60,
                   height: 60,
-                  color: Color.fromARGB(255, 70, 130, 180),
+                  color: const Color.fromARGB(255, 70, 130, 180),
                   
                 ),
                 Container(
                   width:50,
                   height: 50,
-                  color: Color.fromARGB(255, 70, 130, 180),
+                  color: const Color.fromARGB(255, 70, 130, 180),
                   
                 ),
                 Container(
                   width: 40,
                   height: 40,
-                  color: Color.fromARGB(255, 0, 139, 139),
+                  color: const Color.fromARGB(255, 0, 139, 139),
                 ),
                 Container(
                   width: 30,
                   height: 30,
-                  color: Color.fromARGB(255, 25, 25, 112),
+                  color: const Color.fromARGB(255, 25, 25, 112),
                   
                 ),
                 Container(
                   width:20,
                   height: 20,
-                  color: Color.fromARGB(255, 75, 0, 130),
+                  color: const Color.fromARGB(255, 75, 0, 130),
                   
                 ),
                 Container(
                   width: 10,
                   height: 10,
-                  color: Color.fromARGB(255, 0, 0, 139),
+                  color: const Color.fromARGB(255, 0, 0, 139),
                 ),
               ],
             ),

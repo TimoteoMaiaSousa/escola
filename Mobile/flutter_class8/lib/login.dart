@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 70),
+              padding: const EdgeInsets.symmetric(horizontal: 70),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -39,7 +39,7 @@ class _LoginState extends State<Login> {
                           'imagens/logo.png',
                           height: 250,
                         ),
-                        Text(
+                        const Text(
                           "Login",
                           style: TextStyle(
                             color: Colors.white,
@@ -47,11 +47,11 @@ class _LoginState extends State<Login> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        TextField(
-                          decoration: const InputDecoration(labelText: 'Email'),
+                        const TextField(
+                          decoration: InputDecoration(labelText: 'Email'),
                         ),
-                        TextField(
-                          decoration: const InputDecoration(labelText: 'Senha'),
+                        const TextField(
+                          decoration: InputDecoration(labelText: 'Senha'),
                           obscureText: true,
                         ),
                         const SizedBox(height: 20),
@@ -84,7 +84,7 @@ class _LoginState extends State<Login> {
                           'imagens/logo.png',
                           height: 250,
                         ),
-                        Text(
+                        const Text(
                           "Login",
                           style: TextStyle(
                             color: Colors.white,
@@ -92,19 +92,19 @@ class _LoginState extends State<Login> {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        TextField(
-                          decoration: const InputDecoration(
+                        const TextField(
+                          decoration: InputDecoration(
                               labelText: 'Nome de usuário'),
                         ),
-                        TextField(
-                          decoration: const InputDecoration(labelText: 'Email'),
+                        const TextField(
+                          decoration: InputDecoration(labelText: 'Email'),
                         ),
-                        TextField(
-                          decoration: const InputDecoration(labelText: 'Senha'),
+                        const TextField(
+                          decoration: InputDecoration(labelText: 'Senha'),
                           obscureText: true,
                         ),
-                        TextField(
-                          decoration: const InputDecoration(
+                        const TextField(
+                          decoration: InputDecoration(
                               labelText: 'Confirme a senha'),
                           obscureText: true,
                         ),

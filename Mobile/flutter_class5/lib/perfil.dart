@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Perfil extends StatelessWidget {
+  const Perfil({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,13 +71,13 @@ class Perfil extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
-                                color: Color.fromARGB(255, 246, 241, 241),
+                                color: const Color.fromARGB(255, 246, 241, 241),
                               ),
                               child: IconButton(
                                 onPressed: (){
                                   Icon(Icons.favorite, color: Colors.grey[300],);
                               }, 
-                              icon: Icon(Icons.favorite, color: Colors.red,)),
+                              icon: const Icon(Icons.favorite, color: Colors.red,)),
                               ),
                             ),
                         ],

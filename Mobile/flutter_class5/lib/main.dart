@@ -5,17 +5,19 @@ import 'login.dart';
 void main(){
   runApp(DevicePreview(
     enabled: true,
-    builder:(context) => Login()
+    builder:(context) => const Login()
   ));
 }
 class ReceitasApp extends StatelessWidget {
+  const ReceitasApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.amber
       ),
-      home: Login(),
+      home: const Login(),
     );
   }
 }

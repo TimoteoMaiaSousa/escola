@@ -4,6 +4,8 @@ import 'package:flutter_class8/chocolate.dart';
 import 'package:flutter_class8/laranja.dart';
 
 class Favoritos extends StatelessWidget {
+  const Favoritos({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

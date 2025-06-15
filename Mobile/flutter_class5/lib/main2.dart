@@ -16,6 +16,8 @@ void main(){
   );
 }
 class ReceitasApp extends StatelessWidget {
+  const ReceitasApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,6 +29,8 @@ class ReceitasApp extends StatelessWidget {
   }
 }
 class MenuInferiorR extends StatefulWidget {
+  const MenuInferiorR({super.key});
+
   @override
   State<MenuInferiorR> createState() => _MenuInferiorRState();
 }
@@ -48,15 +52,15 @@ class _MenuInferiorRState extends State<MenuInferiorR> {
 
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _indiceAtual,
-          onTap: (int _indiceNovo) {
+          onTap: (int indiceNovo) {
             setState(() {
-              _indiceAtual = _indiceNovo;
+              _indiceAtual = indiceNovo;
             });
           },
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.receipt,
-              color: _indiceAtual == 0 ? Color.fromARGB(255, 255, 151, 82) : Colors.grey[600]),
+              color: _indiceAtual == 0 ? const Color.fromARGB(255, 255, 151, 82) : Colors.grey[600]),
               label: "Receitas",
             ),
             BottomNavigationBarItem(

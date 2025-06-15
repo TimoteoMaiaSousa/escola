@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: const Color.fromARGB(255, 255, 151, 82),
           leading: Padding(
             padding: const EdgeInsets.all(0),
-            child: Container(
+            child: SizedBox(
               width: 200,
               height: 200,
               child: Image.asset(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Favoritos extends StatelessWidget {
+  const Favoritos({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +70,7 @@ class Favoritos extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
-                                color: Color.fromARGB(255, 246, 241, 241),
+                                color: const Color.fromARGB(255, 246, 241, 241),
                               ),
                               child: IconButton(
                                 icon: const Icon(
@@ -216,7 +218,7 @@ class Favoritos extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
-                                color: Color.fromARGB(255, 246, 241, 241),
+                                color: const Color.fromARGB(255, 246, 241, 241),
                               ),
                               child: IconButton(
                                 icon: const Icon(

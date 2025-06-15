@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class MinhaConta extends StatelessWidget {
+  const MinhaConta({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +75,7 @@ class MinhaConta extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
-                                color: Color.fromARGB(255, 246, 241, 241),
+                                color: const Color.fromARGB(255, 246, 241, 241),
                               ),
                               child: IconButton(
                                   onPressed: () {
@@ -82,7 +84,7 @@ class MinhaConta extends StatelessWidget {
                                       color: Colors.grey[300],
                                     );
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.favorite,
                                     color: Colors.red,
                                   )),

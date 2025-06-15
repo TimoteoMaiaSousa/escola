@@ -15,9 +15,9 @@ class _MenuInferiorState extends State<MenuInferior> {
   int _indiceAtual = 0;
   int _selectedIndex = 0;
   final List<Widget> _telas = [
-    Shopyy(),
-    Nubenk(),
-    Spotifai(),
+    const Shopyy(),
+    const Nubenk(),
+    const Spotifai(),
   ];
     // ignore: unused_element
     void _onItemTapped(int index) {
@@ -33,15 +33,15 @@ class _MenuInferiorState extends State<MenuInferior> {
         body: _telas[_indiceAtual],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _indiceAtual,
-          onTap: (int _indiceNovo) {
+          onTap: (int indiceNovo) {
             setState(() {
-              _indiceAtual = _indiceNovo;
+              _indiceAtual = indiceNovo;
             });
           },
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.shopify,
-              color: _selectedIndex == 0 ? Color.fromARGB(255, 254, 100, 50) : Colors.grey[700]),
+              color: _selectedIndex == 0 ? const Color.fromARGB(255, 254, 100, 50) : Colors.grey[700]),
               label: "Shopyy",
             ),
             BottomNavigationBarItem(
@@ -51,7 +51,7 @@ class _MenuInferiorState extends State<MenuInferior> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.music_note,
-              color: _selectedIndex == 0 ? Color.fromARGB(255, 28, 198, 89) : Colors.grey[700]),
+              color: _selectedIndex == 0 ? const Color.fromARGB(255, 28, 198, 89) : Colors.grey[700]),
               label: "Spotifai",
             ),
           ],

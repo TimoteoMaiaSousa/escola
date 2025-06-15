@@ -9,6 +9,8 @@ void main() {
 }
 
 class ReceitasApp extends StatelessWidget {
+  const ReceitasApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +18,7 @@ class ReceitasApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: Login(),
+      home: const Login(),
     );
   }
 }

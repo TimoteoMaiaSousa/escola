@@ -5,6 +5,8 @@ import 'package:flutter_class5/cenoura.dart';
 import 'package:flutter_class5/chocolate.dart';
 
 class Rotas extends StatelessWidget {
+  const Rotas({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

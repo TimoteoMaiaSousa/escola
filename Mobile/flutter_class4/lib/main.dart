@@ -6,6 +6,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,13 +22,13 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Primeira Rota'),
+        title: const Text('Primeira Rota'),
         backgroundColor: Colors.blueAccent,
       ),
       body: Center(
@@ -37,7 +39,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/tela2'); // Navega usando o nome da rota
               },
-              child: Text('Próxima tela'),
+              child: const Text('Próxima tela'),
             ),
           ],
         ),

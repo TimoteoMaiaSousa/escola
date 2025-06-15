@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Cenoura extends StatelessWidget {
+  const Cenoura({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -169,7 +171,7 @@ class Cenoura extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.share),
+        child: const Icon(Icons.share),
         onPressed: () {
           
         },

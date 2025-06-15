@@ -4,6 +4,6 @@ import 'login.dart';
 void main() {
   runApp(DevicePreview(
     enabled: true,
-    builder:(context) => Login()
+    builder:(context) => const Login()
   ));
 }

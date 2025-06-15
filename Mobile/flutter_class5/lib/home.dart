@@ -15,6 +15,8 @@ void main(){
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,7 @@ class HomePage extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 255, 151, 82),
           leading: Padding(
             padding: const EdgeInsets.all(0),
-            child: Container(
+            child: SizedBox(
               width: 200,
               height: 200,
               child: Image.asset(
@@ -103,7 +105,7 @@ class HomePage extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
-                                color: Color.fromARGB(255, 246, 241, 241),
+                                color: const Color.fromARGB(255, 246, 241, 241),
                               ),
                               child: IconButton(
                                 icon: const Icon(
@@ -251,7 +253,7 @@ class HomePage extends StatelessWidget {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
-                                color: Color.fromARGB(255, 246, 241, 241),
+                                color: const Color.fromARGB(255, 246, 241, 241),
                               ),
                               child: IconButton(
                                 icon: const Icon(

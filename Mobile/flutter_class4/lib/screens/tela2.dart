@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Tela2 extends StatelessWidget {
+  const Tela2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Segunda Rota'),
+        title: const Text('Segunda Rota'),
         backgroundColor: Colors.blueAccent,
       ),
       body: Center(
@@ -13,7 +15,7 @@ class Tela2 extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context); // Volta para a tela anterior
           },
-          child: Text('Voltar'),
+          child: const Text('Voltar'),
         ),
       ),
     );

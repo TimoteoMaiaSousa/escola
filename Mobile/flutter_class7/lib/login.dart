@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 70),
+                  padding: const EdgeInsets.symmetric(horizontal: 70),
                   child: Form(
                     child: Center(
                       child: SingleChildScrollView(
@@ -49,7 +49,7 @@ class _LoginState extends State<Login> {
                                   'imagens/logo.png',
                                   height: 250,
                                 ),
-                                Text(
+                                const Text(
                                   "Login",
                                   style: TextStyle(
                                     color: Colors.white,
@@ -62,9 +62,9 @@ class _LoginState extends State<Login> {
                             Padding(
                               padding: const EdgeInsets.all(0),
                               child: TextFormField(
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Color.fromARGB(197, 255, 255, 255)),
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   label: Text(
                                     "E-mail",
                                     style: TextStyle(
@@ -77,9 +77,9 @@ class _LoginState extends State<Login> {
                             Padding(
                               padding: const EdgeInsets.all(0),
                               child: TextFormField(
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Color.fromARGB(197, 255, 255, 255)),
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   label: Text(
                                     "Senha",
                                     style: TextStyle(
@@ -94,12 +94,12 @@ class _LoginState extends State<Login> {
                               child: Column(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(0),
+                                    padding: const EdgeInsets.all(0),
                                     child: TextFormField(
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Color.fromARGB(
                                               197, 255, 255, 255)),
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                         label: Text(
                                           'Confirme a senha',
                                           style: TextStyle(color: Colors.white),
@@ -109,12 +109,12 @@ class _LoginState extends State<Login> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsets.all(0),
+                                    padding: const EdgeInsets.all(0),
                                     child: TextFormField(
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Color.fromARGB(
                                               197, 255, 255, 255)),
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                         label: Text(
                                           "Nome de usuário",
                                           style: TextStyle(color: Colors.white),
@@ -126,9 +126,9 @@ class _LoginState extends State<Login> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.all(0),
+                              padding: const EdgeInsets.all(0),
                               child: Container(
-                                margin: EdgeInsets.symmetric(vertical: 20),
+                                margin: const EdgeInsets.symmetric(vertical: 20),
                                 child: ElevatedButton(
                                   onPressed: () {
                                     setState(() {
@@ -152,7 +152,7 @@ class _LoginState extends State<Login> {
                                     (statusEntry)
                                         ? "Ainda não possui uma conta? Cadastre-se"
                                         : "Já tem uma conta? Entre já",
-                                    style: TextStyle(color: Colors.white),
+                                    style: const TextStyle(color: Colors.white),
                                     textAlign: TextAlign.center,
                                   ),
                                 )
