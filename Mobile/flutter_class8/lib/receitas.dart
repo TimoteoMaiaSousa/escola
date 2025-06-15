@@ -24,7 +24,7 @@ class Receitas extends StatelessWidget {
                   borderRadius: BorderRadius.circular(0.0)),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
@@ -93,7 +93,7 @@ class Receitas extends StatelessWidget {
                   borderRadius: BorderRadius.circular(0.0)),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
@@ -162,7 +162,7 @@ class Receitas extends StatelessWidget {
                   borderRadius: BorderRadius.circular(0.0)),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
