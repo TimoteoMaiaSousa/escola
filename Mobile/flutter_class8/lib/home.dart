@@ -7,10 +7,10 @@ class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -24,9 +24,9 @@ class _HomePageState extends State<HomePage> {
       case 0:
         return const Receitas();
       case 1:
-        return MinhaConta();
+        return const MinhaConta();
       case 2:
-        return Favoritos();
+        return const Favoritos();
       default:
         return const Receitas();
     }

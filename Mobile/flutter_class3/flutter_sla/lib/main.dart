@@ -29,10 +29,10 @@ class MyApp extends StatefulWidget {
     : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   int salario = 3000;
   int salario2 = 5000;
 

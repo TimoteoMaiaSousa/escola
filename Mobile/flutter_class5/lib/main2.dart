@@ -7,12 +7,12 @@ import 'package:device_preview/device_preview.dart';
 void main(){
   runApp(DevicePreview(
     enabled: true,
-    builder:(context) => ReceitasApp())
+    builder:(context) => const ReceitasApp())
     );
   runApp(
     DevicePreview(
     enabled: true,
-    builder:(context) => MenuInferiorR())
+    builder:(context) => const MenuInferiorR())
   );
 }
 class ReceitasApp extends StatelessWidget {
@@ -24,7 +24,7 @@ class ReceitasApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber
       ),
-      home: Rotas(),
+      home: const Rotas(),
     );
   }
 }
@@ -39,9 +39,9 @@ class _MenuInferiorRState extends State<MenuInferiorR> {
   int _indiceAtual = 0;
 
   final List<Widget> _telas = [
-    ReceitasApp(),
-    Perfil(),
-    Favoritos()
+    const ReceitasApp(),
+    const Perfil(),
+    const Favoritos()
   ];
   @override
   Widget build(BuildContext context) {

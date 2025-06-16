@@ -9,7 +9,7 @@ class Rota extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => const HomePage(),
       },
     );
   }
@@ -143,7 +143,7 @@ class _LoginState extends State<Login> {
                                     });
                                     Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => const HomePage()),
                       );
                                   },
                                   child: Text(

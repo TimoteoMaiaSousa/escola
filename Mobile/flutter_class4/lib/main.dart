@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/tela2.dart'; // Importa a segunda tela
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Primeira Rota',
       initialRoute: '/', // Define a rota inicial
       routes: {
-        '/': (context) => HomePage(), // Rota para a tela inicial
-        '/tela2': (context) => Tela2(), // Rota para a segunda tela
+        '/': (context) => const HomePage(), // Rota para a tela inicial
+        '/tela2': (context) => const Tela2(), // Rota para a segunda tela
       },
     );
   }

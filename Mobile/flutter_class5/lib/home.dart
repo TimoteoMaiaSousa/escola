@@ -5,12 +5,12 @@ import 'main2.dart';
 void main(){
   runApp(DevicePreview(
     enabled: true,
-    builder:(context) => ReceitasApp())
+    builder:(context) => const ReceitasApp())
     );
   runApp(
     DevicePreview(
     enabled: true,
-    builder:(context) => MenuInferiorR())
+    builder:(context) => const MenuInferiorR())
   );
 }
 

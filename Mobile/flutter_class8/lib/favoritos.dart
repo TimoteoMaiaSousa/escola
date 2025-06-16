@@ -24,7 +24,7 @@ class Favoritos extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Chocolate()),
+                MaterialPageRoute(builder: (context) => const Chocolate()),
               );
             },
             style: OutlinedButton.styleFrom(
@@ -93,7 +93,7 @@ class Favoritos extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Laranja()),
+                MaterialPageRoute(builder: (context) => const Laranja()),
               );
             },
             style: OutlinedButton.styleFrom(
@@ -162,7 +162,7 @@ class Favoritos extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Cenoura()),
+                MaterialPageRoute(builder: (context) => const Cenoura()),
               );
             },
             style: OutlinedButton.styleFrom(

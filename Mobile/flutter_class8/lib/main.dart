@@ -4,7 +4,7 @@ import 'login.dart';
 void main() {
   runApp(DevicePreview(
     enabled: true,
-    builder:(context) => ReceitasApp()
+    builder:(context) => const ReceitasApp()
   ));
 }
 

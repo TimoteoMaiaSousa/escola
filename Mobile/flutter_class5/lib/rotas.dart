@@ -12,10 +12,10 @@ class Rotas extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
-        '/chocolate': (context) => Chocolate(),
-        '/laranja': (context) => Laranja(),
-        '/cenoura': (context) => Cenoura(),
+        '/': (context) => const HomePage(),
+        '/chocolate': (context) => const Chocolate(),
+        '/laranja': (context) => const Laranja(),
+        '/cenoura': (context) => const Cenoura(),
       },
     );
   }
