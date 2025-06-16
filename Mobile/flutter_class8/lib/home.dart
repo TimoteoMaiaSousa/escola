@@ -53,7 +53,7 @@ class HomePageState extends State<HomePage> {
             ),
           ),
         ),
-      body: _getBody(),
+      body:_getBody(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

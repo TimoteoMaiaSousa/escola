@@ -85,7 +85,7 @@ class LoginState extends State<Login> {
                           height: 250,
                         ),
                         const Text(
-                          "Login",
+                          "Cadastro",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 30,
