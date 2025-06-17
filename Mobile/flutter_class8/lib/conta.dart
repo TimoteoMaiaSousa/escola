@@ -8,7 +8,6 @@ class MinhaConta extends StatefulWidget {
 }
 
 class _MinhaContaState extends State<MinhaConta> {
-  // A boolean to control visibility: true for profile, false for new content
   bool _showProfile = true;
   bool _isLike = false;
 
